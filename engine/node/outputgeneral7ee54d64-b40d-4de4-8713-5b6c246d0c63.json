@@ -1,0 +1,67 @@
+{
+    "berangkat": [
+        {
+            "brkt": "16:20",
+            "harga": "420000",
+            "maskapai": "Sriwijaya",
+            "tiba": "16:50"
+        },
+        {
+            "brkt": "09:30",
+            "harga": "445400",
+            "maskapai": "Citilink",
+            "tiba": "10:00"
+        },
+        {
+            "brkt": "11:50",
+            "harga": "445400",
+            "maskapai": "Citilink",
+            "tiba": "12:15"
+        },
+        {
+            "brkt": "18:15",
+            "harga": "445400",
+            "maskapai": "Citilink",
+            "tiba": "18:45"
+        },
+        {
+            "brkt": "09:15",
+            "harga": "475400",
+            "maskapai": "Sriwijaya",
+            "tiba": "09:45"
+        }
+    ],
+    "kembali": [
+        {
+            "brkt": "06:20",
+            "harga": "445400",
+            "maskapai": "Citilink",
+            "tiba": "08:50"
+        },
+        {
+            "brkt": "12:45",
+            "harga": "445400",
+            "maskapai": "Citilink",
+            "tiba": "15:20"
+        },
+        {
+            "brkt": "10:15",
+            "harga": "475400",
+            "maskapai": "Sriwijaya",
+            "tiba": "12:40"
+        },
+        {
+            "brkt": "15:00",
+            "harga": "475400",
+            "maskapai": "Sriwijaya",
+            "tiba": "17:25"
+        },
+        {
+            "brkt": "15:10",
+            "harga": "479400",
+            "maskapai": "Citilink",
+            "tiba": "17:40"
+        }
+    ],
+    "url": "http://www.traveloka.com/fulltwosearch?ap=BPN.SUB&dt=09-12-2014.11-12-2014&ps=1.0.0"
+}

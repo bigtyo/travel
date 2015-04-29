@@ -1,0 +1,11 @@
+/* 
+    Document   : generic
+    Created on : Aug 27, 2013, 4:28:44 PM
+    Author     : Raditya
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+tbody#datalisting tr{
+    cursor: pointer;
+}

@@ -1,0 +1,66 @@
+
+                        <table class="rgMasterTable" rules="all" style="width: 100%; table-layout: auto; empty-cells: show;" border="0">
+                          <colgroup>
+                            <col>
+                            <col>
+                          </colgroup>
+                          <thead>
+                            <tr>
+                              <th scope="col" class="rgHeader">Details</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr class="rgRow">
+                              <td>
+                                <div class="sectionBody">
+                                  <table class="priceDisplay">
+                                    <tbody>
+                                      <tr>
+                                        <td class="td1"></td>
+                                        <td class="td2 bold">SUB
+                                -
+                                DPS</td>
+                                        <td class="td2"></td>
+                                        <td class="td2 bold">Total</td>
+                                      </tr>
+                                      <tr>
+                                        <td class="td1 grey-color">Fare price</td>
+                                        <td class="td2">557,600 IDR</td>
+                                        <td class="td2"></td>
+                                        <td class="td2 bold grey-color">557,600 IDR</td>
+                                      </tr>
+                                      <tr>
+                                        <td class="td1 grey-color">Fare fees and taxes</td>
+                                        <td class="td2">65,760 IDR</td>
+                                        <td class="td2"></td>
+                                        <td class="td2 bold grey-color">65,760 IDR</td>
+                                      </tr>
+                                      <tr class="noBorderBottom">
+                                        <td class="td1 grey-color">Infant</td>
+                                        <td class="td2">150,000 IDR </td>
+                                        <td class="td2"></td>
+                                        <td class="td2"></td>
+                                      </tr>
+                                      <tr>
+                                        <td class="td1 grey-color">Checked baggage 20kg</td>
+                                        <td class="td2 position_1">100,000 IDR</td>
+                                        <td class="td2 bold grey-color"></td>
+                                      </tr>
+                                      <tr>
+                                        <td class="td1 grey-color">Checked baggage 20kg</td>
+                                        <td class="td2 position_1">100,000 IDR</td>
+                                        <td class="td2 bold grey-color"></td>
+                                      </tr>
+                                      <tr class="total">
+                                        <td class="td1"><strong>Total amount</strong></td>
+                                        <td colspan="1"></td>
+                                        <td class="td2 bold">1,013,360 IDR</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      <div id='OptionalHeaderContent_lblBookingNumber'>HGR4FK</div>

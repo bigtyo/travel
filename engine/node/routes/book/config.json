@@ -1,0 +1,1 @@
+{"ignoreSslErrors": "yes",  "maxDiskCacheSize": 1000, "diskCache": true ,  "sslProtocol": "tlsv1", "webSecurityEnabled": true }

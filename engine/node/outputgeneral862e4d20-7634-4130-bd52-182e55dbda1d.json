@@ -1,0 +1,69 @@
+{
+    "berangkat": [
+        {
+            "brkt": "18:15",
+            "harga": "688500",
+            "kode": "QG-635",
+            "maskapai": "Citilink",
+            "tiba": "18:45"
+        },
+        {
+            "brkt": "09:15",
+            "harga": "722100",
+            "kode": "SJ-233",
+            "maskapai": "Sriwijaya",
+            "tiba": "09:45"
+        },
+        {
+            "brkt": "16:20",
+            "harga": "722100",
+            "kode": "SJ-253",
+            "maskapai": "Sriwijaya",
+            "tiba": "16:50"
+        },
+        {
+            "brkt": "09:30",
+            "harga": "768800",
+            "kode": "QG-631",
+            "maskapai": "Citilink",
+            "tiba": "10:00"
+        }
+    ],
+    "kembali": [
+        {
+            "brkt": "10:15",
+            "harga": "472200",
+            "kode": "SJ-252",
+            "maskapai": "Sriwijaya",
+            "tiba": "12:40"
+        },
+        {
+            "brkt": "15:00",
+            "harga": "559100",
+            "kode": "SJ-232",
+            "maskapai": "Sriwijaya",
+            "tiba": "17:25"
+        },
+        {
+            "brkt": "06:20",
+            "harga": "611700",
+            "kode": "QG-630",
+            "maskapai": "Citilink",
+            "tiba": "08:50"
+        },
+        {
+            "brkt": "12:45",
+            "harga": "611700",
+            "kode": "QG-632",
+            "maskapai": "Citilink",
+            "tiba": "15:20"
+        },
+        {
+            "brkt": "15:10",
+            "harga": "611700",
+            "kode": "QG-634",
+            "maskapai": "Citilink",
+            "tiba": "17:40"
+        }
+    ]
+}

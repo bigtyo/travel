@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= title
+  select
+    option(value="Citilink") Citilink
+  br
+  iframe(width='800', height='800', scrolling='no', frameborder='no', src= isrc)
+  br
+  input.btn.btn-primary(type='button',value='book')

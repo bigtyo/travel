@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<definitions xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="urn:webservice" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="urn:webservice">
+<types>
+<xsd:schema targetNamespace="urn:webservice"
+>
+ <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+ <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/" />
+ <xsd:complexType name="reqWsSearchFlight">
+  <xsd:sequence>
+   <xsd:element name="Username" type="xsd:string" minOccurs="1" nillable="true" maxOccurs="1"/>
+   <xsd:element name="Password" type="xsd:string" minOccurs="1" nillable="true" maxOccurs="1"/>
+   <xsd:element name="ReturnStatus" type="xsd:string" minOccurs="1" nillable="true" maxOccurs="1"/>
+   <xsd:element name="CityFrom" type="xsd:string" minOccurs="1" nillable="true" maxOccurs="1"/>
+   <xsd:element name="CityTo" type="xsd:string" minOccurs="1" nillable="true" maxOccurs="1"/>
+   <xsd:element name="DepartDate" type="xsd:string" minOccurs="1" nillable="true" maxOccurs="1"/>
+   <xsd:element name="ReturnDate" type="xsd:string" minOccurs="1" nillable="true" maxOccurs="1"/>
+   <xsd:element name="PromoCode" type="xsd:string" minOccurs="1" nillable="true" maxOccurs="1"/>
+   <xsd:element name="Adult" type="xsd:string" minOccurs="1" nillable="true" maxOccurs="1"/>
+   <xsd:element name="Child" type="xsd:string" minOccurs="1" nillable="true" maxOccurs="1"/>
+   <xsd:element name="Infant" type="xsd:string" minOccurs="1" nillable="true" maxOccurs="1"/>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:complexType name="respWsSearchFlight">
+  <xsd:sequence>
+   <xsd:element name="Username" type="xsd:string" minOccurs="1" nillable="true" maxOccurs="1"/>
+   <xsd:element name="Adult" type="xsd:string" minOccurs="1" nillable="true" maxOccurs="1"/>
+   <xsd:element name="Child" type="xsd:string" minOccurs="1" nillable="true" maxOccurs="1"/>
+   <xsd:element name="Infant" type="xsd:string" minOccurs="1" nillable="true" maxOccurs="1"/>
+   <xsd:element name="TripDetail" type="tns:respTripDetailArrayFirst"/>
+   <xsd:element name="SearchKey" type="xsd:string" minOccurs="1" nillable="true" maxOccurs="1"/>
+   <xsd:element name="ErrorCode" type="xsd:string" minOccurs="1" nillable="true" maxOccurs="1"/>
+   <xsd:element name="ErrorMessage" type="xsd:string" minOccurs="1" nillable="true" maxOccurs="1"/>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:complexType name="respTripDetailArrayFirst">
+  <xsd:complexContent>
+   <xsd:restriction base="SOAP-ENC:Array">
+    <xsd:attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:respTripDetailArraySecond[]"/>
+   </xsd:restriction>
+  </xsd:complexContent>
+ </xsd:complexType>
+ <xsd:complexType name="respTripDetailArraySecond">
+  <xsd:sequence>
+   <xsd:element name="CityFrom" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="CityTo" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="Category" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="FlightRoute" type="tns:respFlightRouteArrayFirst"/>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:complexType name="respFlightRouteArrayFirst">
+  <xsd:complexContent>
+   <xsd:restriction base="SOAP-ENC:Array">
+    <xsd:attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:respFlightRouteArraySecond[]"/>
+   </xsd:restriction>
+  </xsd:complexContent>
+ </xsd:complexType>
+ <xsd:complexType name="respFlightRouteArraySecond">
+  <xsd:sequence>
+   <xsd:element name="CityFrom" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="CityTo" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="Std" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="Sta" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="FlightTime" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="Segments" type="tns:respSegmentsArray"/>
+   <xsd:element name="ClassesAvailable" type="tns:respClassAvailableArray"/>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:complexType name="respSegmentsArray">
+  <xsd:complexContent>
+   <xsd:restriction base="SOAP-ENC:Array">
+    <xsd:attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:respSegmentsArraySecond[]"/>
+   </xsd:restriction>
+  </xsd:complexContent>
+ </xsd:complexType>
+ <xsd:complexType name="respSegmentsArraySecond">
+  <xsd:sequence>
+   <xsd:element name="CarrierCode" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="NoFlight" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="DepartureStation" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="ArrivalStation" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="Std" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="Sta" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="Legs" type="tns:respLegsArray"/>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:complexType name="respLegsArray">
+  <xsd:complexContent>
+   <xsd:restriction base="SOAP-ENC:Array">
+    <xsd:attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:respLegsArraySecond[]"/>
+   </xsd:restriction>
+  </xsd:complexContent>
+ </xsd:complexType>
+ <xsd:complexType name="respLegsArraySecond">
+  <xsd:sequence>
+   <xsd:element name="DepartureStation" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="ArrivalStation" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="Std" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="Sta" type="xsd:string" minOccurs="1" nillable="true"/>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:complexType name="respClassAvailableArray">
+  <xsd:complexContent>
+   <xsd:restriction base="SOAP-ENC:Array">
+    <xsd:attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:respClassAvailableArraySecond[]"/>
+   </xsd:restriction>
+  </xsd:complexContent>
+ </xsd:complexType>
+ <xsd:complexType name="respClassAvailableArraySecond">
+  <xsd:sequence>
+   <xsd:element name="Key" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="Availability" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="Class" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="SeatAvail" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="Price" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="PriceDetail" type="tns:PriceDetailArray"/>
+   <xsd:element name="Currency" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="StatusAvail" type="xsd:string" minOccurs="1" nillable="true"/>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:complexType name="PriceDetailArray">
+  <xsd:complexContent>
+   <xsd:restriction base="SOAP-ENC:Array">
+    <xsd:attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:PriceDetailArrays[]"/>
+   </xsd:restriction>
+  </xsd:complexContent>
+ </xsd:complexType>
+ <xsd:complexType name="PriceDetailArrays">
+  <xsd:sequence>
+   <xsd:element name="PaxCategory" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="Total_1" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="Nta_1" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="FareComponent" type="tns:FareComponentArray"/>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:complexType name="FareComponentArray">
+  <xsd:complexContent>
+   <xsd:restriction base="SOAP-ENC:Array">
+    <xsd:attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:FareComponentArrays[]"/>
+   </xsd:restriction>
+  </xsd:complexContent>
+ </xsd:complexType>
+ <xsd:complexType name="FareComponentArrays">
+  <xsd:sequence>
+   <xsd:element name="FareChargeTypeCode" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="FareChargeTypeDesc" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="Amount" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="CurrencyCode" type="xsd:string" minOccurs="1" nillable="true"/>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:complexType name="reqWsGeneratePNR">
+  <xsd:sequence>
+   <xsd:element name="Username" type="xsd:string" minOccurs="1" nillable="true" maxOccurs="1"/>
+   <xsd:element name="Password" type="xsd:string" minOccurs="1" nillable="true" maxOccurs="1"/>
+   <xsd:element name="Received" type="xsd:string" minOccurs="1" nillable="true" maxOccurs="1"/>
+   <xsd:element name="ReceivedPhone" type="xsd:string" minOccurs="1" nillable="true" maxOccurs="1"/>
+   <xsd:element name="Email" type="xsd:string" minOccurs="1" nillable="true" maxOccurs="1"/>
+   <xsd:element name="SearchKey" type="xsd:string" minOccurs="1" nillable="true" maxOccurs="1"/>
+   <xsd:element name="ExtraCoverAddOns" type="xsd:string" minOccurs="1" nillable="true" maxOccurs="1"/>
+   <xsd:element name="AdultNames" type="tns:AdultNamesArray"/>
+   <xsd:element name="ChildNames" type="tns:ChildNamesArray"/>
+   <xsd:element name="InfantNames" type="tns:InfantNamesArray"/>
+   <xsd:element name="Keys" type="tns:InputReqArrayKey"/>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:complexType name="InputReqArrayKey">
+  <xsd:complexContent>
+   <xsd:restriction base="SOAP-ENC:Array">
+    <xsd:attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:InputReqArrayKeys[]"/>
+   </xsd:restriction>
+  </xsd:complexContent>
+ </xsd:complexType>
+ <xsd:complexType name="InputReqArrayKeys">
+  <xsd:all>
+   <xsd:element name="Key" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="Category" type="xsd:string" minOccurs="1" nillable="true"/>
+  </xsd:all>
+ </xsd:complexType>
+ <xsd:complexType name="ChildNamesArray">
+  <xsd:complexContent>
+   <xsd:restriction base="SOAP-ENC:Array">
+    <xsd:attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:InputReqNameArray[]"/>
+   </xsd:restriction>
+  </xsd:complexContent>
+ </xsd:complexType>
+ <xsd:complexType name="AdultNamesArray">
+  <xsd:complexContent>
+   <xsd:restriction base="SOAP-ENC:Array">
+    <xsd:attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:InputReqNameArray[]"/>
+   </xsd:restriction>
+  </xsd:complexContent>
+ </xsd:complexType>
+ <xsd:complexType name="InputReqNameArray">
+  <xsd:all>
+   <xsd:element name="FirstName" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="LastName" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="Suffix" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="Dob" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="IdNo" type="xsd:string" minOccurs="1" nillable="true"/>
+  </xsd:all>
+ </xsd:complexType>
+ <xsd:complexType name="InfantNamesArray">
+  <xsd:complexContent>
+   <xsd:restriction base="SOAP-ENC:Array">
+    <xsd:attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:InputReqArrayInf[]"/>
+   </xsd:restriction>
+  </xsd:complexContent>
+ </xsd:complexType>
+ <xsd:complexType name="InputReqArrayInf">
+  <xsd:all>
+   <xsd:element name="FirstName" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="LastName" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="Dob" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="AdultRefference" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="IdNo" type="xsd:string" minOccurs="1" nillable="true"/>
+  </xsd:all>
+ </xsd:complexType>
+ <xsd:complexType name="respWsGeneratePNR">
+  <xsd:sequence>
+   <xsd:element name="Username" type="xsd:string" minOccurs="1" nillable="true" maxOccurs="1"/>
+   <xsd:element name="BookingCode" type="xsd:string" minOccurs="1" nillable="true" maxOccurs="1"/>
+   <xsd:element name="YourItineraryDetails" type="tns:YourItineraryDetailsArray"/>
+   <xsd:element name="ErrorCode" type="xsd:string" minOccurs="1" nillable="true" maxOccurs="1"/>
+   <xsd:element name="ErrorMessage" type="xsd:string" minOccurs="1" nillable="true" maxOccurs="1"/>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:complexType name="YourItineraryDetailsArray">
+  <xsd:sequence>
+   <xsd:element name="ReservationDetails" type="tns:ReservationDetailsArray"/>
+   <xsd:element name="PassengerDetails" type="tns:PassengerDetailsArray"/>
+   <xsd:element name="ItineraryDetails" type="tns:ItineraryDetailsArray"/>
+   <xsd:element name="PaymentDetails" type="tns:PaymentDetailsArray"/>
+   <xsd:element name="ContactList" type="tns:ContactListArray"/>
+   <xsd:element name="AgentDetails" type="tns:AgentDetailsArray"/>
+   <xsd:element name="BookingRemarks" type="tns:BookingRemarksArray"/>
+   <xsd:element name="AdditionalInformation" type="tns:AdditionalInformationArray"/>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:complexType name="AdditionalInformationArray">
+  <xsd:complexContent>
+   <xsd:restriction base="SOAP-ENC:Array">
+    <xsd:attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:AdditionalInformationArrays[]"/>
+   </xsd:restriction>
+  </xsd:complexContent>
+ </xsd:complexType>
+ <xsd:complexType name="AdditionalInformationArrays">
+  <xsd:sequence>
+   <xsd:element name="Reasons" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="Value" type="xsd:string" minOccurs="1" nillable="true"/>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:complexType name="BookingRemarksArray">
+  <xsd:complexContent>
+   <xsd:restriction base="SOAP-ENC:Array">
+    <xsd:attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:BookingRemarksArrays[]"/>
+   </xsd:restriction>
+  </xsd:complexContent>
+ </xsd:complexType>
+ <xsd:complexType name="BookingRemarksArrays">
+  <xsd:sequence>
+   <xsd:element name="CommentText" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="CreatedBy" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="CreatedDate" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="IpAddress" type="xsd:string" minOccurs="1" nillable="true"/>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:complexType name="AgentDetailsArray">
+  <xsd:sequence>
+   <xsd:element name="BookedBy" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="IssuedBy" type="xsd:string" minOccurs="1" nillable="true"/>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:complexType name="ContactListArray">
+  <xsd:complexContent>
+   <xsd:restriction base="SOAP-ENC:Array">
+    <xsd:attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:ContactListArrays[]"/>
+   </xsd:restriction>
+  </xsd:complexContent>
+ </xsd:complexType>
+ <xsd:complexType name="ContactListArrays">
+  <xsd:sequence>
+   <xsd:element name="Type" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="Description" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="Value" type="xsd:string" minOccurs="1" nillable="true"/>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:complexType name="PaymentDetailsArray">
+  <xsd:sequence>
+   <xsd:element name="BasicFare" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="Others" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="Sti" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="Total" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="Nta" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="CurrencyCode" type="xsd:string" minOccurs="1" nillable="true"/>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:complexType name="ItineraryDetailsArray">
+  <xsd:sequence>
+   <xsd:element name="Journey" type="tns:JourneyArray"/>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:complexType name="JourneyArray">
+  <xsd:complexContent>
+   <xsd:restriction base="SOAP-ENC:Array">
+    <xsd:attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:JourneyArrays[]"/>
+   </xsd:restriction>
+  </xsd:complexContent>
+ </xsd:complexType>
+ <xsd:complexType name="JourneyArrays">
+  <xsd:sequence>
+   <xsd:element name="Segment" type="tns:SegmentArray"/>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:complexType name="SegmentArray">
+  <xsd:complexContent>
+   <xsd:restriction base="SOAP-ENC:Array">
+    <xsd:attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:SegmentArrays[]"/>
+   </xsd:restriction>
+  </xsd:complexContent>
+ </xsd:complexType>
+ <xsd:complexType name="SegmentArrays">
+  <xsd:sequence>
+   <xsd:element name="FlownDate" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="FlightNo" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="CityFrom" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="CityTo" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="CityFromName" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="CityToName" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="StdLT" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="StaLT" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="ReservationStatus" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="Class" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="CheckInStatus" type="xsd:string" minOccurs="1" nillable="true"/>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:complexType name="ReservationDetailsArray">
+  <xsd:sequence>
+   <xsd:element name="BookingCode" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="BookingDate" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="BalanceDue" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="BalanceDueRemarks" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="CurrencyCode" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="Time" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="TimeDescription" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="Status" type="xsd:string" minOccurs="1" nillable="true"/>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:complexType name="PassengerDetailsArray">
+  <xsd:complexContent>
+   <xsd:restriction base="SOAP-ENC:Array">
+    <xsd:attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:PassengerDetailsArrays[]"/>
+   </xsd:restriction>
+  </xsd:complexContent>
+ </xsd:complexType>
+ <xsd:complexType name="PassengerDetailsArrays">
+  <xsd:sequence>
+   <xsd:element name="No" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="Suffix" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="FirstName" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="LastName" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="SeatQty" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="TicketNumber" type="xsd:string" minOccurs="1" nillable="true"/>
+   <xsd:element name="SpecialRequest" type="xsd:string" minOccurs="1" nillable="true"/>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:complexType name="reqWsIssuing">
+  <xsd:sequence>
+   <xsd:element name="Username" type="xsd:string" minOccurs="1" nillable="true" maxOccurs="1"/>
+   <xsd:element name="Password" type="xsd:string" minOccurs="1" nillable="true" maxOccurs="1"/>
+   <xsd:element name="BookingCode" type="xsd:string" minOccurs="1" nillable="true" maxOccurs="1"/>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:complexType name="respWsIssuing">
+  <xsd:sequence>
+   <xsd:element name="Username" type="xsd:string" minOccurs="1" nillable="true" maxOccurs="1"/>
+   <xsd:element name="BookingCode" type="xsd:string" minOccurs="1" nillable="true" maxOccurs="1"/>
+   <xsd:element name="YourItineraryDetails" type="tns:YourItineraryDetailsArray"/>
+   <xsd:element name="ErrorCode" type="xsd:string" minOccurs="1" nillable="true" maxOccurs="1"/>
+   <xsd:element name="ErrorMessage" type="xsd:string" minOccurs="1" nillable="true" maxOccurs="1"/>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:complexType name="reqWsRetrievePNR">
+  <xsd:sequence>
+   <xsd:element name="Username" type="xsd:string" minOccurs="1" nillable="true" maxOccurs="1"/>
+   <xsd:element name="Password" type="xsd:string" minOccurs="1" nillable="true" maxOccurs="1"/>
+   <xsd:element name="BookingCode" type="xsd:string" minOccurs="1" nillable="true" maxOccurs="1"/>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:complexType name="respWsRetrievePNR">
+  <xsd:sequence>
+   <xsd:element name="Username" type="xsd:string" minOccurs="1" nillable="true" maxOccurs="1"/>
+   <xsd:element name="BookingCode" type="xsd:string" minOccurs="1" nillable="true" maxOccurs="1"/>
+   <xsd:element name="YourItineraryDetails" type="tns:YourItineraryDetailsArray"/>
+   <xsd:element name="ErrorCode" type="xsd:string" minOccurs="1" nillable="true" maxOccurs="1"/>
+   <xsd:element name="ErrorMessage" type="xsd:string" minOccurs="1" nillable="true" maxOccurs="1"/>
+  </xsd:sequence>
+ </xsd:complexType>
+</xsd:schema>
+</types>
+<message name="WsSearchFlightRequest">
+  <part name="param" type="tns:reqWsSearchFlight" /></message>
+<message name="WsSearchFlightResponse">
+  <part name="return" type="tns:respWsSearchFlight" /></message>
+<message name="WsGeneratePNRRequest">
+  <part name="param" type="tns:reqWsGeneratePNR" /></message>
+<message name="WsGeneratePNRResponse">
+  <part name="return" type="tns:respWsGeneratePNR" /></message>
+<message name="WsIssuingRequest">
+  <part name="param" type="tns:reqWsIssuing" /></message>
+<message name="WsIssuingResponse">
+  <part name="return" type="tns:respWsIssuing" /></message>
+<message name="WsRetrievePNRRequest">
+  <part name="param" type="tns:reqWsRetrievePNR" /></message>
+<message name="WsRetrievePNRResponse">
+  <part name="return" type="tns:respWsRetrievePNR" /></message>
+<portType name="webservicePortType">
+  <operation name="WsSearchFlight">
+    <documentation>SJ Webservice</documentation>
+    <input message="tns:WsSearchFlightRequest"/>
+    <output message="tns:WsSearchFlightResponse"/>
+  </operation>
+  <operation name="WsGeneratePNR">
+    <documentation>SJ Webservice</documentation>
+    <input message="tns:WsGeneratePNRRequest"/>
+    <output message="tns:WsGeneratePNRResponse"/>
+  </operation>
+  <operation name="WsIssuing">
+    <documentation>SJ Webservice</documentation>
+    <input message="tns:WsIssuingRequest"/>
+    <output message="tns:WsIssuingResponse"/>
+  </operation>
+  <operation name="WsRetrievePNR">
+    <documentation>SJ Webservice</documentation>
+    <input message="tns:WsRetrievePNRRequest"/>
+    <output message="tns:WsRetrievePNRResponse"/>
+  </operation>
+</portType>
+<binding name="webserviceBinding" type="tns:webservicePortType">
+  <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+  <operation name="WsSearchFlight">
+    <soap:operation soapAction="urn:sj_service#WsSearchFlight" style="rpc"/>
+    <input><soap:body use="encoded" namespace="urn:sj_service" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></input>
+    <output><soap:body use="encoded" namespace="urn:sj_service" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></output>
+  </operation>
+  <operation name="WsGeneratePNR">
+    <soap:operation soapAction="urn:sj_service#WsGeneratePNR" style="rpc"/>
+    <input><soap:body use="encoded" namespace="urn:sj_service" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></input>
+    <output><soap:body use="encoded" namespace="urn:sj_service" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></output>
+  </operation>
+  <operation name="WsIssuing">
+    <soap:operation soapAction="urn:sj_service#WsIssuing" style="rpc"/>
+    <input><soap:body use="encoded" namespace="urn:sj_service" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></input>
+    <output><soap:body use="encoded" namespace="urn:sj_service" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></output>
+  </operation>
+  <operation name="WsRetrievePNR">
+    <soap:operation soapAction="urn:sj_service#WsRetrievePNR" style="rpc"/>
+    <input><soap:body use="encoded" namespace="urn:sj_service" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></input>
+    <output><soap:body use="encoded" namespace="urn:sj_service" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></output>
+  </operation>
+</binding>
+<service name="webservice">
+  <port name="webservicePort" binding="tns:webserviceBinding">
+    <soap:address location="http://wsx.sriwijayaair.co.id:11443/wsdl.eticketv110/index.php"/>
+  </port>
+</service>
+</definitions>

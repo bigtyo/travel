@@ -1,0 +1,86 @@
+
+            <div><img class="hidden" src="https://e-marketing.citilink.co.id/a/r2091712699/citilink.gif?a=N3J86V&amp;b=922075.00000&amp;c=DPS-SUB/O_ECONOMY_Normal/ADT@1@386900.0000|DPS-SUB/O_ECONOMY_Normal/CHD@1@310175.00000&amp;d=IDR&amp;e=NULL"></div>
+            <table>
+              <caption>
+                <div><img id="ImgFlight1" src="images/Citilink/citilink_outbound.gif"></div>
+                <div>Onward Flight</div>Denpasar Bali (DPS) to Surabaya (SUB)
+                                </caption>
+              <tbody><tr>
+                <td>1&nbsp;Adult</td>
+                <td></td>
+                <td class="right">
+                  <div>Rp.279,000</div>
+                </td>
+              </tr>
+              <tr>
+                <td>1&nbsp;Child</td>
+                <td></td>
+                <td class="right">
+                  <div>Rp.209,250</div>
+                </td>
+              </tr>
+              <tr>
+                <td>1&nbsp;Infant</td>
+                <td></td>
+                <td class="right">
+                  <div>Rp.200,000</div>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="3">
+                  <div id="ssrContainerId_1_1"></div>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="3">
+                  <div id="taxAndFeeContainerId_1_1">
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td><strong>Passenger Tax/Fees</strong></td>
+                        </tr>
+                        <tr>
+                          <td class="feeTableCell"><span class="floatLeft clearLeft">Passenger Service Charge / PSC</span></td>
+                          <td><span class="floatRight clearRight">Rp.150,000</span></td>
+                        </tr>
+                        <tr>
+                          <td class="feeTableCell"><span class="floatLeft clearLeft">Insurance Surcharge</span></td>
+                          <td><span class="floatRight clearRight">Rp.10,000</span></td>
+                        </tr>
+                        <tr>
+                          <td class="feeTableCell"><span class="floatLeft clearLeft">Value Added Tax</span></td>
+                          <td><span class="floatRight clearRight">Rp.48,825</span></td>
+                        </tr>
+                        <tr>
+                          <td><br><strong>Infant Tax/Fees</strong></td>
+                        </tr>
+                        <tr>
+                          <td class="feeTableCell"><span class="floatLeft clearLeft">Insurance Surcharge</span></td>
+                          <td><span class="floatRight clearRight">Rp.5,000</span></td>
+                        </tr>
+                        <tr>
+                          <td class="feeTableCell"><span class="floatLeft clearLeft">Value Added Tax</span></td>
+                          <td><span class="floatRight clearRight">Rp.20,000</span></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </td>
+              </tr>
+            </tbody></table>
+            <table>
+              <tbody><tr>
+                <td colspan="3">
+                  <div id="serviceFeeContainerId" class="hidden"></div>
+                </td>
+              </tr>
+            </tbody></table>
+            <hr class="lineDivider">
+            <table>
+              <tbody><tr>
+                <td><strong>Total Price</strong></td>
+                <td class="right">Rp.922,075</td>
+              </tr>
+            </tbody></table>
+            <p>All amounts shown are in IDR.</p>
+          <span>Kode Booking</span><div id='kodebooking'>N3J86V</div>

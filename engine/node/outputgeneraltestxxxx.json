@@ -1,0 +1,54 @@
+{
+    "berangkat": [
+        {
+            "brkt": "11:50",
+            "harga": "445400",
+            "maskapai": "Citilink",
+            "tiba": "12:15"
+        },
+        {
+            "brkt": "18:15",
+            "harga": "445400",
+            "maskapai": "Citilink",
+            "tiba": "18:45"
+        },
+        {
+            "brkt": "09:30",
+            "harga": "479400",
+            "maskapai": "Citilink",
+            "tiba": "10:00"
+        }
+    ],
+    "kembali": [
+        {
+            "brkt": "06:20",
+            "harga": "445400",
+            "maskapai": "Citilink",
+            "tiba": "08:50"
+        },
+        {
+            "brkt": "12:45",
+            "harga": "445400",
+            "maskapai": "Citilink",
+            "tiba": "15:20"
+        },
+        {
+            "brkt": "10:15",
+            "harga": "475400",
+            "maskapai": "Sriwijaya",
+            "tiba": "12:40"
+        },
+        {
+            "brkt": "15:00",
+            "harga": "475400",
+            "maskapai": "Sriwijaya",
+            "tiba": "17:25"
+        },
+        {
+            "brkt": "15:10",
+            "harga": "479400",
+            "maskapai": "Citilink",
+            "tiba": "17:40"
+        }
+    ]
+}

@@ -1,0 +1,397 @@
+{
+    "berangkat": [
+        {
+            "brkt": "09:15",
+            "harga": "383200",
+            "maskapai": "Lion",
+            "tiba": "09:45"
+        },
+        {
+            "brkt": "10:30",
+            "harga": "383200",
+            "maskapai": "Lion",
+            "tiba": "11:00"
+        },
+        {
+            "brkt": "13:35",
+            "harga": "383200",
+            "maskapai": "Lion",
+            "tiba": "14:05"
+        },
+        {
+            "brkt": "14:50",
+            "harga": "383200",
+            "maskapai": "Lion",
+            "tiba": "15:20"
+        },
+        {
+            "brkt": "15:40",
+            "harga": "383200",
+            "maskapai": "Lion",
+            "tiba": "16:10"
+        },
+        {
+            "brkt": "16:40",
+            "harga": "383200",
+            "maskapai": "Lion",
+            "tiba": "17:10"
+        },
+        {
+            "brkt": "17:55",
+            "harga": "383200",
+            "maskapai": "Lion",
+            "tiba": "18:25"
+        },
+        {
+            "brkt": "20:55",
+            "harga": "383200",
+            "maskapai": "Lion",
+            "tiba": "21:25"
+        },
+        {
+            "brkt": "06:50",
+            "harga": "471200",
+            "maskapai": "Lion",
+            "tiba": "07:20"
+        },
+        {
+            "brkt": "10:10",
+            "harga": "667100",
+            "maskapai": "Garuda",
+            "tiba": "10:35"
+        },
+        {
+            "brkt": "13:20",
+            "harga": "667100",
+            "maskapai": "Garuda",
+            "tiba": "13:55"
+        },
+        {
+            "brkt": "19:05",
+            "harga": "667100",
+            "maskapai": "Garuda",
+            "tiba": "19:30"
+        },
+        {
+            "brkt": "08:15",
+            "harga": "757200",
+            "maskapai": "Lion",
+            "tiba": "08:45"
+        },
+        {
+            "brkt": "08:15",
+            "harga": "1296200",
+            "maskapai": "Lion",
+            "tiba": "08:45"
+        },
+        {
+            "brkt": "19:45",
+            "harga": "1425600",
+            "maskapai": "Garuda",
+            "tiba": "23:25"
+        },
+        {
+            "brkt": "17:55",
+            "harga": "1425600",
+            "maskapai": "Garuda",
+            "tiba": "23:25"
+        },
+        {
+            "brkt": "19:45",
+            "harga": "1425600",
+            "maskapai": "Garuda",
+            "tiba": "00:35"
+        },
+        {
+            "brkt": "08:50",
+            "harga": "1432200",
+            "maskapai": "Garuda",
+            "tiba": "13:05"
+        },
+        {
+            "brkt": "10:00",
+            "harga": "1822700",
+            "maskapai": "Garuda",
+            "tiba": "14:05"
+        },
+        {
+            "brkt": "10:00",
+            "harga": "1822700",
+            "maskapai": "Garuda",
+            "tiba": "15:05"
+        },
+        {
+            "brkt": "10:55",
+            "harga": "1822700",
+            "maskapai": "Garuda",
+            "tiba": "15:05"
+        },
+        {
+            "brkt": "15:55",
+            "harga": "1822700",
+            "maskapai": "Garuda",
+            "tiba": "19:45"
+        },
+        {
+            "brkt": "17:55",
+            "harga": "1822700",
+            "maskapai": "Garuda",
+            "tiba": "22:10"
+        },
+        {
+            "brkt": "10:55",
+            "harga": "1906300",
+            "maskapai": "Garuda",
+            "tiba": "16:45"
+        },
+        {
+            "brkt": "13:05",
+            "harga": "1906300",
+            "maskapai": "Garuda",
+            "tiba": "16:45"
+        },
+        {
+            "brkt": "13:05",
+            "harga": "1906300",
+            "maskapai": "Garuda",
+            "tiba": "17:25"
+        },
+        {
+            "brkt": "15:55",
+            "harga": "2169200",
+            "maskapai": "Garuda",
+            "tiba": "21:05"
+        },
+        {
+            "brkt": "06:30",
+            "harga": "2299000",
+            "maskapai": "Garuda",
+            "tiba": "11:45"
+        },
+        {
+            "brkt": "14:35",
+            "harga": "2299000",
+            "maskapai": "Garuda",
+            "tiba": "19:45"
+        },
+        {
+            "brkt": "14:35",
+            "harga": "2382600",
+            "maskapai": "Garuda",
+            "tiba": "18:45"
+        },
+        {
+            "brkt": "06:30",
+            "harga": "2684000",
+            "maskapai": "Garuda",
+            "tiba": "10:25"
+        }
+    ],
+    "kembali": [
+        {
+            "brkt": "06:05",
+            "harga": "383200",
+            "maskapai": "Lion",
+            "tiba": "08:35"
+        },
+        {
+            "brkt": "07:20",
+            "harga": "383200",
+            "maskapai": "Lion",
+            "tiba": "09:50"
+        },
+        {
+            "brkt": "08:30",
+            "harga": "383200",
+            "maskapai": "Lion",
+            "tiba": "11:00"
+        },
+        {
+            "brkt": "10:25",
+            "harga": "383200",
+            "maskapai": "Lion",
+            "tiba": "12:55"
+        },
+        {
+            "brkt": "11:40",
+            "harga": "383200",
+            "maskapai": "Lion",
+            "tiba": "14:10"
+        },
+        {
+            "brkt": "14:45",
+            "harga": "383200",
+            "maskapai": "Lion",
+            "tiba": "17:15"
+        },
+        {
+            "brkt": "17:45",
+            "harga": "383200",
+            "maskapai": "Lion",
+            "tiba": "20:15"
+        },
+        {
+            "brkt": "18:05",
+            "harga": "383200",
+            "maskapai": "Lion",
+            "tiba": "20:35"
+        },
+        {
+            "brkt": "19:55",
+            "harga": "383200",
+            "maskapai": "Lion",
+            "tiba": "22:25"
+        },
+        {
+            "brkt": "13:05",
+            "harga": "427200",
+            "maskapai": "Lion",
+            "tiba": "15:25"
+        },
+        {
+            "brkt": "06:20",
+            "harga": "445400",
+            "maskapai": "Citilink",
+            "tiba": "08:50"
+        },
+        {
+            "brkt": "12:45",
+            "harga": "445400",
+            "maskapai": "Citilink",
+            "tiba": "15:20"
+        },
+        {
+            "brkt": "10:15",
+            "harga": "475400",
+            "maskapai": "Sriwijaya",
+            "tiba": "12:40"
+        },
+        {
+            "brkt": "15:00",
+            "harga": "475400",
+            "maskapai": "Sriwijaya",
+            "tiba": "17:25"
+        },
+        {
+            "brkt": "15:10",
+            "harga": "479400",
+            "maskapai": "Citilink",
+            "tiba": "17:40"
+        },
+        {
+            "brkt": "06:35",
+            "harga": "667100",
+            "maskapai": "Garuda",
+            "tiba": "09:10"
+        },
+        {
+            "brkt": "10:00",
+            "harga": "667100",
+            "maskapai": "Garuda",
+            "tiba": "12:35"
+        },
+        {
+            "brkt": "15:40",
+            "harga": "667100",
+            "maskapai": "Garuda",
+            "tiba": "18:20"
+        },
+        {
+            "brkt": "13:45",
+            "harga": "1232000",
+            "maskapai": "Garuda",
+            "tiba": "18:30"
+        },
+        {
+            "brkt": "17:45",
+            "harga": "1296200",
+            "maskapai": "Lion",
+            "tiba": "20:15"
+        },
+        {
+            "brkt": "08:25",
+            "harga": "1906300",
+            "maskapai": "Garuda",
+            "tiba": "14:55"
+        },
+        {
+            "brkt": "11:10",
+            "harga": "1906300",
+            "maskapai": "Garuda",
+            "tiba": "18:45"
+        },
+        {
+            "brkt": "14:50",
+            "harga": "1906300",
+            "maskapai": "Garuda",
+            "tiba": "20:50"
+        },
+        {
+            "brkt": "15:50",
+            "harga": "1906300",
+            "maskapai": "Garuda",
+            "tiba": "22:30"
+        },
+        {
+            "brkt": "14:50",
+            "harga": "1906300",
+            "maskapai": "Garuda",
+            "tiba": "22:30"
+        },
+        {
+            "brkt": "12:30",
+            "harga": "2038300",
+            "maskapai": "Garuda",
+            "tiba": "18:45"
+        },
+        {
+            "brkt": "13:30",
+            "harga": "2038300",
+            "maskapai": "Garuda",
+            "tiba": "20:50"
+        },
+        {
+            "brkt": "08:50",
+            "harga": "2207700",
+            "maskapai": "Garuda",
+            "tiba": "14:55"
+        },
+        {
+            "brkt": "10:10",
+            "harga": "2299000",
+            "maskapai": "Garuda",
+            "tiba": "16:55"
+        },
+        {
+            "brkt": "06:15",
+            "harga": "2382600",
+            "maskapai": "Garuda",
+            "tiba": "12:05"
+        },
+        {
+            "brkt": "06:15",
+            "harga": "2382600",
+            "maskapai": "Garuda",
+            "tiba": "13:30"
+        },
+        {
+            "brkt": "11:10",
+            "harga": "2382600",
+            "maskapai": "Garuda",
+            "tiba": "16:55"
+        },
+        {
+            "brkt": "05:25",
+            "harga": "2645500",
+            "maskapai": "Garuda",
+            "tiba": "12:05"
+        },
+        {
+            "brkt": "07:50",
+            "harga": "2645500",
+            "maskapai": "Garuda",
+            "tiba": "13:30"
+        }
+    ],
+    "url": "http://www.traveloka.com/fulltwosearch?ap=BPN.SUB&dt=09-12-2014.11-12-2014&ps=1.0.0"
+}

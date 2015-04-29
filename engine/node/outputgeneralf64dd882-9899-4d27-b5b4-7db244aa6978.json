@@ -1,0 +1,139 @@
+{
+    "berangkat": [
+        {
+            "brkt": "18:15",
+            "harga": "642600",
+            "kode": "QG-635",
+            "maskapai": "Citilink",
+            "tiba": "18:45"
+        },
+        {
+            "brkt": "13:20",
+            "harga": "713300",
+            "kode": "GA-357",
+            "maskapai": "Garuda",
+            "tiba": "13:55"
+        },
+        {
+            "brkt": "19:05",
+            "harga": "713300",
+            "kode": "GA-355",
+            "maskapai": "Garuda",
+            "tiba": "19:30"
+        },
+        {
+            "brkt": "10:10",
+            "harga": "1026800",
+            "kode": "GA-351",
+            "maskapai": "Garuda",
+            "tiba": "10:35"
+        }
+    ],
+    "kembali": [
+        {
+            "brkt": "15:00",
+            "harga": "472200",
+            "kode": "SJ-232",
+            "maskapai": "Sriwijaya",
+            "tiba": "17:25"
+        },
+        {
+            "brkt": "06:05",
+            "harga": "477700",
+            "kode": "JT-360",
+            "maskapai": "Lion",
+            "tiba": "08:35"
+        },
+        {
+            "brkt": "07:20",
+            "harga": "477700",
+            "kode": "JT-262",
+            "maskapai": "Lion",
+            "tiba": "09:50"
+        },
+        {
+            "brkt": "08:30",
+            "harga": "477700",
+            "kode": "JT-264",
+            "maskapai": "Lion",
+            "tiba": "11:00"
+        },
+        {
+            "brkt": "18:05",
+            "harga": "477700",
+            "kode": "JT-730",
+            "maskapai": "Lion",
+            "tiba": "20:35"
+        },
+        {
+            "brkt": "19:55",
+            "harga": "477700",
+            "kode": "JT-364",
+            "maskapai": "Lion",
+            "tiba": "22:25"
+        },
+        {
+            "brkt": "06:20",
+            "harga": "528900",
+            "kode": "QG-630",
+            "maskapai": "Citilink",
+            "tiba": "08:50"
+        },
+        {
+            "brkt": "15:10",
+            "harga": "528900",
+            "kode": "QG-634",
+            "maskapai": "Citilink",
+            "tiba": "17:40"
+        },
+        {
+            "brkt": "10:15",
+            "harga": "559100",
+            "kode": "SJ-252",
+            "maskapai": "Sriwijaya",
+            "tiba": "12:40"
+        },
+        {
+            "brkt": "10:25",
+            "harga": "575900",
+            "kode": "JT-362",
+            "maskapai": "Lion",
+            "tiba": "12:55"
+        },
+        {
+            "brkt": "11:40",
+            "harga": "575900",
+            "kode": "JT-260",
+            "maskapai": "Lion",
+            "tiba": "14:10"
+        },
+        {
+            "brkt": "13:05",
+            "harga": "575900",
+            "kode": "JT-266",
+            "maskapai": "Lion",
+            "tiba": "15:25"
+        },
+        {
+            "brkt": "17:45",
+            "harga": "575900",
+            "kode": "JT-368",
+            "maskapai": "Lion",
+            "tiba": "20:15"
+        },
+        {
+            "brkt": "14:45",
+            "harga": "717800",
+            "kode": "JT-366",
+            "maskapai": "Lion",
+            "tiba": "17:15"
+        },
+        {
+            "brkt": "17:45",
+            "harga": "1339800",
+            "kode": "JT-858",
+            "maskapai": "Lion",
+            "tiba": "20:15"
+        }
+    ]
+}

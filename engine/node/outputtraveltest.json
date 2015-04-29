@@ -1,0 +1,186 @@
+{
+    "berangkat": [
+        {
+            "brkt": "10:30",
+            "harga": "383200",
+            "maskapai": "Lion",
+            "tiba": "11:00"
+        },
+        {
+            "brkt": "14:50",
+            "harga": "383200",
+            "maskapai": "Lion",
+            "tiba": "15:20"
+        },
+        {
+            "brkt": "15:40",
+            "harga": "383200",
+            "maskapai": "Lion",
+            "tiba": "16:10"
+        },
+        {
+            "brkt": "16:40",
+            "harga": "383200",
+            "maskapai": "Lion",
+            "tiba": "17:10"
+        },
+        {
+            "brkt": "17:55",
+            "harga": "383200",
+            "maskapai": "Lion",
+            "tiba": "18:25"
+        },
+        {
+            "brkt": "20:55",
+            "harga": "383200",
+            "maskapai": "Lion",
+            "tiba": "21:25"
+        },
+        {
+            "brkt": "09:15",
+            "harga": "427200",
+            "maskapai": "Lion",
+            "tiba": "09:45"
+        },
+        {
+            "brkt": "13:35",
+            "harga": "427200",
+            "maskapai": "Lion",
+            "tiba": "14:05"
+        },
+        {
+            "brkt": "09:30",
+            "harga": "445400",
+            "maskapai": "Citilink",
+            "tiba": "10:00"
+        },
+        {
+            "brkt": "11:50",
+            "harga": "445400",
+            "maskapai": "Citilink",
+            "tiba": "12:15"
+        },
+        {
+            "brkt": "18:15",
+            "harga": "445400",
+            "maskapai": "Citilink",
+            "tiba": "18:45"
+        },
+        {
+            "brkt": "06:50",
+            "harga": "471200",
+            "maskapai": "Lion",
+            "tiba": "07:20"
+        },
+        {
+            "brkt": "09:15",
+            "harga": "475400",
+            "maskapai": "Sriwijaya",
+            "tiba": "09:45"
+        },
+        {
+            "brkt": "16:20",
+            "harga": "475400",
+            "maskapai": "Sriwijaya",
+            "tiba": "16:50"
+        },
+        {
+            "brkt": "08:15",
+            "harga": "757200",
+            "maskapai": "Lion",
+            "tiba": "08:45"
+        }
+    ],
+    "kembali": [
+        {
+            "brkt": "",
+            "harga": "383200",
+            "maskapai": "Lion",
+            "tiba": "08:35"
+        },
+        {
+            "brkt": "",
+            "harga": "383200",
+            "maskapai": "Lion",
+            "tiba": "09:50"
+        },
+        {
+            "brkt": "",
+            "harga": "383200",
+            "maskapai": "Lion",
+            "tiba": "11:00"
+        },
+        {
+            "brkt": "",
+            "harga": "383200",
+            "maskapai": "Lion",
+            "tiba": "12:55"
+        },
+        {
+            "brkt": "",
+            "harga": "383200",
+            "maskapai": "Lion",
+            "tiba": "14:10"
+        },
+        {
+            "brkt": "",
+            "harga": "383200",
+            "maskapai": "Lion",
+            "tiba": "17:15"
+        },
+        {
+            "brkt": "",
+            "harga": "383200",
+            "maskapai": "Lion",
+            "tiba": "20:15"
+        },
+        {
+            "brkt": "",
+            "harga": "383200",
+            "maskapai": "Lion",
+            "tiba": "20:35"
+        },
+        {
+            "brkt": "",
+            "harga": "383200",
+            "maskapai": "Lion",
+            "tiba": "22:25"
+        },
+        {
+            "brkt": "",
+            "harga": "427200",
+            "maskapai": "Lion",
+            "tiba": "15:25"
+        },
+        {
+            "brkt": "",
+            "harga": "445400",
+            "maskapai": "Citilink",
+            "tiba": "08:50"
+        },
+        {
+            "brkt": "",
+            "harga": "445400",
+            "maskapai": "Citilink",
+            "tiba": "15:20"
+        },
+        {
+            "brkt": "",
+            "harga": "475400",
+            "maskapai": "Sriwijaya",
+            "tiba": "12:40"
+        },
+        {
+            "brkt": "",
+            "harga": "475400",
+            "maskapai": "Sriwijaya",
+            "tiba": "17:25"
+        },
+        {
+            "brkt": "",
+            "harga": "479400",
+            "maskapai": "Citilink",
+            "tiba": "17:40"
+        }
+    ]
+}

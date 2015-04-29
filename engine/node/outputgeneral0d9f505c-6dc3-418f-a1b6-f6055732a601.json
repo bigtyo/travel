@@ -1,0 +1,169 @@
+{
+    "berangkat": [
+        {
+            "brkt": "09:15",
+            "harga": "383200",
+            "maskapai": "Lion",
+            "tiba": "09:45"
+        },
+        {
+            "brkt": "10:30",
+            "harga": "383200",
+            "maskapai": "Lion",
+            "tiba": "11:00"
+        },
+        {
+            "brkt": "13:35",
+            "harga": "383200",
+            "maskapai": "Lion",
+            "tiba": "14:05"
+        },
+        {
+            "brkt": "14:50",
+            "harga": "383200",
+            "maskapai": "Lion",
+            "tiba": "15:20"
+        },
+        {
+            "brkt": "15:40",
+            "harga": "383200",
+            "maskapai": "Lion",
+            "tiba": "16:10"
+        },
+        {
+            "brkt": "16:40",
+            "harga": "383200",
+            "maskapai": "Lion",
+            "tiba": "17:10"
+        },
+        {
+            "brkt": "17:55",
+            "harga": "383200",
+            "maskapai": "Lion",
+            "tiba": "18:25"
+        },
+        {
+            "brkt": "20:55",
+            "harga": "383200",
+            "maskapai": "Lion",
+            "tiba": "21:25"
+        },
+        {
+            "brkt": "16:20",
+            "harga": "420000",
+            "maskapai": "Sriwijaya",
+            "tiba": "16:50"
+        },
+        {
+            "brkt": "09:30",
+            "harga": "445400",
+            "maskapai": "Citilink",
+            "tiba": "10:00"
+        },
+        {
+            "brkt": "11:50",
+            "harga": "445400",
+            "maskapai": "Citilink",
+            "tiba": "12:15"
+        },
+        {
+            "brkt": "18:15",
+            "harga": "445400",
+            "maskapai": "Citilink",
+            "tiba": "18:45"
+        },
+        {
+            "brkt": "06:50",
+            "harga": "471200",
+            "maskapai": "Lion",
+            "tiba": "07:20"
+        },
+        {
+            "brkt": "09:15",
+            "harga": "475400",
+            "maskapai": "Sriwijaya",
+            "tiba": "09:45"
+        },
+        {
+            "brkt": "08:15",
+            "harga": "757200",
+            "maskapai": "Lion",
+            "tiba": "08:45"
+        },
+        {
+            "brkt": "08:15",
+            "harga": "1296200",
+            "maskapai": "Lion",
+            "tiba": "08:45"
+        }
+    ],
+    "kembali": [
+        {
+            "brkt": "06:05",
+            "harga": "383200",
+            "maskapai": "Lion",
+            "tiba": "08:35"
+        },
+        {
+            "brkt": "07:20",
+            "harga": "383200",
+            "maskapai": "Lion",
+            "tiba": "09:50"
+        },
+        {
+            "brkt": "08:30",
+            "harga": "383200",
+            "maskapai": "Lion",
+            "tiba": "11:00"
+        },
+        {
+            "brkt": "10:25",
+            "harga": "383200",
+            "maskapai": "Lion",
+            "tiba": "12:55"
+        },
+        {
+            "brkt": "11:40",
+            "harga": "383200",
+            "maskapai": "Lion",
+            "tiba": "14:10"
+        },
+        {
+            "brkt": "14:45",
+            "harga": "383200",
+            "maskapai": "Lion",
+            "tiba": "17:15"
+        },
+        {
+            "brkt": "17:45",
+            "harga": "383200",
+            "maskapai": "Lion",
+            "tiba": "20:15"
+        },
+        {
+            "brkt": "18:05",
+            "harga": "383200",
+            "maskapai": "Lion",
+            "tiba": "20:35"
+        },
+        {
+            "brkt": "19:55",
+            "harga": "383200",
+            "maskapai": "Lion",
+            "tiba": "22:25"
+        },
+        {
+            "brkt": "13:05",
+            "harga": "427200",
+            "maskapai": "Lion",
+            "tiba": "15:25"
+        },
+        {
+            "brkt": "17:45",
+            "harga": "1296200",
+            "maskapai": "Lion",
+            "tiba": "20:15"
+        }
+    ],
+    "url": "http://www.traveloka.com/fulltwosearch?ap=BPN.SUB&dt=09-12-2014.11-12-2014&ps=1.0.0"
+}

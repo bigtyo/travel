@@ -1,0 +1,161 @@
+<div id="main-content">
+				
+<div style="background-color: #DFE7FB; padding: 10px 20px 10px 20px; margin-bottom: 5px; height:30px;">
+
+	<div style="float: left;">
+		<h3 style="padding-top: 0px; margin-top: 0px;">
+			Your Details</h3>
+		<p>
+			Booking being made by:
+			<span id="AgentDetails_lblConsultantName">MICHAEL YULIANTO</span></p>
+	</div>
+	<div style="text-align: right;">
+		<p>
+			
+			</p>
+	</div>
+</div>
+
+				<div class="subhead" style="margin-left: 0px;">
+					<img src="images/en/HdrFtr/sh-traveldetails.gif" alt="Your Travel Details"></div>
+				<div class="pageerror">
+					
+				</div>
+				<div id="divThankYouMessage" style="display:none;">
+					<p>
+						Thank you for choosing to travel with Lion Air.Â&nbsp; Please find below your booking confirmation and itinerary details.</p>
+				</div>
+				<div id="divThankYouMessage2" style="display:block;">
+					<p>
+						YOUR BOOKING IS NOW CONFIRMED AS BELOW, PLEASE ISSUE TICKET AT OUR TICKETING AGENT.</p>
+				</div>
+				<div>
+					<h2>
+						Reservation Details</h2>
+				</div>
+				<div>
+					<table id="reservationDetails">
+						<tbody><tr>
+							<td class="LabelColumn">
+								<span class="etiHeading">
+									Booking Reference</span>
+							</td>
+							<td class="RelocHighlight">
+								<span id="lblRefNumber">UBQSZY</span></td>
+							<td class="LabelColumn">
+							</td>
+							<td>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="etiHeading">
+									Date Of Booking</span>
+							</td>
+							<td>
+								<span id="lblIssuedDate">25 February, 2015</span>
+							</td>
+							<td id="tdPayBy" style="padding-left:50px;display:block;" align="right">
+								<span class="etiHeading">
+									Please Pay By
+								</span>
+							</td>
+
+							<td id="tdPayByDate" class="RelocHighlight" style="width:200px;display:block;">
+								<span id="lblPayByDate">26 February, 2015, 01:40 AM</span>
+							</td>
+
+						</tr>
+					</tbody></table>
+				</div>
+				<div>
+					<h2>
+						Passenger Details</h2>
+				</div>
+				<div>
+					<table id="PassengerTable" style="border-width:0px;height:19px;width:100%;border-collapse:collapse;" border="0" cellpadding="0" cellspacing="0">
+	<tbody><tr id="TableRow1" class="etiHeading">
+		<td id="TableCell1" colspan="1"></td><td id="TableCell2">Name</td><td id="TableCell3">Lion Passport No.</td><td id="TableCell4">Ticket Number</td><td id="TableCell5">Special Request</td>
+	</tr><tr class="Step4_PaxRow Step4ItinEnd">
+		<td class="PassengerTablePaxNumber">1.</td><td>MR RADITYA BAGUS PRATAMA</td><td>NA</td><td></td><td>NA</td>
+	</tr><tr class="Step4_PaxRow Step4ItinEnd">
+		<td class="PassengerTablePaxNumber">2.</td><td>MSTR RASYA ATSAQOFF</td><td>NA</td><td></td><td>NA</td>
+	</tr><tr class="Step4_PaxRow">
+		<td class="PassengerTablePaxNumber">3.</td><td>MISS AISYAH ALUNA</td><td>NA</td><td></td><td>NA</td>
+	</tr>
+</tbody></table>
+				</div>
+				<div>
+					<h2>
+						Itinerary Details</h2>
+				</div>
+				<div>
+					<table id="FlightTable" class="table-results" style="border-width:0px;width:100%;" border="0" cellpadding="0" cellspacing="1">
+	<tbody><tr id="TableRow2" class="etiHeading">
+		<td id="TableCell6">Flight</td><td id="TableCell7">Departing</td><td id="TableCell8">Arriving</td><td id="TableCell9">Details</td><td id="TableCell10">Class</td><td id="TableCell11">Seat</td><td id="TableCell12">Meals</td><td id="TableCell13">Status</td>
+	</tr><tr class="Step4ItinRow" valign="top">
+		<td><div class="FlightNumberInTable"><div class="carrierLogo"><img src="images/Logos/JT.gif" alt=" Lion Air" class="carrierImage" title=" Lion Air"></div>JT 360</div><div class="FlightNumberInTable" style="clear: both;">737-900ER</div></td><td>Surabaya (SUB)<br>06:05 Tue, <span class="DayString">03 Mar</span></td><td>Balikpapan (BPN)<br>08:35 Tue, <span class="DayString">03 Mar</span></td><td>0 Stops<br>1h 30m</td><td>Economy<br>(X)</td><td>Check In Required</td><td></td><td>Not Ticketed</td>
+	</tr><tr class="Step4ItinRow" valign="top">
+		<td><div class="FlightNumberInTable"><div class="carrierLogo"><img src="images/Logos/JT.gif" alt=" Lion Air" class="carrierImage" title=" Lion Air"></div>JT 367</div><div class="FlightNumberInTable" style="clear: both;">737-900ER</div></td><td>Balikpapan (BPN)<br>06:50 Mon, <span class="DayString">09 Mar</span></td><td>Surabaya (SUB)<br>07:20 Mon, <span class="DayString">09 Mar</span></td><td>0 Stops<br>1h 30m</td><td>Economy<br>(X)</td><td>Check In Required</td><td></td><td>Not Ticketed</td>
+	</tr><tr>
+		<td id="FlightTableFooter" colspan="8">All Timings Are Local Time</td>
+	</tr>
+</tbody></table>
+				</div>
+				<div id="divPaymentDetails">
+					<div>
+						<h2>
+							Payment Details</h2>
+					</div>
+					<table id="PaymentDetails">
+						<tbody><tr>
+							<td style="width: 50%;" class="etiHeading">
+								Name</td>
+							<td colspan="3">
+								<span id="lblCreditCardName">-</span></td>
+						</tr>
+						<tr>
+							<td class="etiHeading">
+								Form of Payment</td>
+							<td colspan="3">
+								<span id="lblCreditCardType">-</span></td>
+						</tr>
+						<tr>
+							<td class="etiHeading" "="">
+								Published Fare</td>
+							<td>
+								<span id="lblTotalBaseFaresCurr">IDR</span></td>
+							<td style="text-align: right;">
+								<span id="lblTotalBaseFares">2,488,200</span></td>
+							<td rowspan="3" style="width: 50px;">
+						</td></tr>
+						<tr>
+							<td class="etiHeading">
+								Total Taxes</td>
+							<td>
+								<span id="lblTotalTaxesCurr">IDR</span></td>
+							<td style="text-align: right;">
+								<span id="lblTotalTaxes">330,000</span></td>
+						</tr>
+						
+						
+						<tr>
+							<td class="etiHeading">
+								Total Fare</td>
+							<td>
+								<span id="lblTotalFaresCurr">IDR</span></td>
+							<td style="text-align: right;">
+								<span id="lblTotalFares">2,818,200</span></td>
+						</tr>
+					</tbody></table>
+				</div>
+				<div id="divCADetails"></div>
+				<div style="clear: both;">
+					<p style="text-align: right">
+						<a id="lbHome" href="javascript:__doPostBack('lbHome','')"><img src="images/en/btn/btn-home.gif" alt=""></a>
+						
+						<a id="lbExit" href="javascript:__doPostBack('lbExit','')"><img src="images/en/btn/btn-done.gif" alt=""></a>
+                        &nbsp;
+					</p>
+				</div>
+			</div><div id='ntaid'>2754400</div>

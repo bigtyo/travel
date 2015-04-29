@@ -1,0 +1,134 @@
+citilink
+login:
+curl 'https://book.citilink.co.id/LoginAgency.aspx' 
+-H 'Host: book.citilink.co.id' 
+-H 'User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:33.0) Gecko/20100101 Firefox/33.0' 
+-H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' 
+-H 'Accept-Language: en-US,en;q=0.5' 
+-H 'Accept-Encoding: gzip, deflate' 
+-H 'Referer: https://book.citilink.co.id/LoginAgency.aspx' 
+-H 'Cookie: PaxAdult=2; PaxChild=1; PaxInfant=1; DateDeparture=2014-11-19; DateReturn=2014-11-24; FlightType=RoundTrip; FlightRoute=BPN-SUB; __utma=205092354.1024050793.1415949226.1415949226.1415949226.1; __utmz=205092354.1415949226.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); ASP.NET_SessionId=pnowjor4vk2jlzuomyrjs255; skysales=2970870282.20480.0000' 
+-H 'Connection: keep-alive' 
+-H 'Content-Type: application/x-www-form-urlencoded' 
+--data '__EVENTTARGET=&__EVENTARGUMENT=&__VIEWSTATE=%2FwEPDwUBMGRkBsrCYiDYbQKCOcoq%2FUTudEf14vk%3D&pageToken=&ControlGroupLoginAgencyView%24AgentLoginLoginAgencyView%24TextBoxUserID=0038000423&ControlGroupLoginAgencyView%24AgentLoginLoginAgencyView%24PasswordFieldPassword=LiNeLuCNCt%211&ControlGroupLoginAgencyView%24AgentLoginLoginAgencyView%24ButtonLogIn=Log+In'
+
+
+search :
+curl 'https://book.citilink.co.id/BookingList.aspx' 
+-H 'Host: book.citilink.co.id' 
+-H 'User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:33.0) Gecko/20100101 Firefox/33.0' 
+-H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' 
+-H 'Accept-Language: en-US,en;q=0.5' -H 'Accept-Encoding: gzip, deflate' 
+-H 'Referer: https://book.citilink.co.id/BookingList.aspx' 
+-H 'Cookie: PaxAdult=2; PaxChild=1; PaxInfant=1; DateDeparture=2014-11-19; DateReturn=2014-11-24; FlightType=RoundTrip; FlightRoute=BPN-SUB; __utma=205092354.1024050793.1415949226.1415949226.1415949226.1; __utmz=205092354.1415949226.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); ASP.NET_SessionId=pnowjor4vk2jlzuomyrjs255; skysales=2970870282.20480.0000' 
+-H 'Connection: keep-alive' 
+-H 'Content-Type: application/x-www-form-urlencoded' 
+--data '__EVENTTARGET=&__EVENTARGUMENT=&__VIEWSTATE=%2FwEPDwUBMGQYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgMFRENvbnRyb2xHcm91cEJvb2tpbmdMaXN0VmlldyRCb29raW5nTGlzdEJvb2tpbmdMaXN0VmlldyRSYWRpb0ZvckFnZW50BUVDb250cm9sR3JvdXBCb29raW5nTGlzdFZpZXckQm9va2luZ0xpc3RCb29raW5nTGlzdFZpZXckUmFkaW9Gb3JBZ2VuY3kFRUNvbnRyb2xHcm91cEJvb2tpbmdMaXN0VmlldyRCb29raW5nTGlzdEJvb2tpbmdMaXN0VmlldyRSYWRpb0ZvckFnZW5jebKrc2pIosHBnawV3CaQPSs4p3oK&pageToken=&AvailabilitySearchInputBookingListVieworiginStation1=BPN&AvailabilitySearchInputBookingListView%24TextBoxMarketOrigin1=BPN&AvailabilitySearchInputBookingListViewdestinationStation1=SUB&AvailabilitySearchInputBookingListView%24TextBoxMarketDestination1=SUB&AvailabilitySearchInputBookingListVieworiginStation2=&AvailabilitySearchInputBookingListView%24TextBoxMarketOrigin2=&AvailabilitySearchInputBookingListViewdestinationStation2=&AvailabilitySearchInputBookingListView%24TextBoxMarketDestination2=&AvailabilitySearchInputBookingListView%24RadioButtonMarketStructure=RoundTrip&AvailabilitySearchInputBookingListView%24DropDownListMarketDay1=22&AvailabilitySearchInputBookingListView%24DropDownListMarketMonth1=2014-11&date_picker=2014-11-22&AvailabilitySearchInputBookingListView%24DropDownListMarketDay2=27&AvailabilitySearchInputBookingListView%24DropDownListMarketMonth2=2014-11&date_picker=2014-11-27&AvailabilitySearchInputBookingListView%24DropDownListPassengerType_ADT=1&AvailabilitySearchInputBookingListView%24DropDownListPassengerType_CHD=1&AvailabilitySearchInputBookingListView%24DropDownListPassengerType_INFANT=1&AvailabilitySearchInputBookingListView%24DropDownListSearchBy=columnView&AvailabilitySearchInputBookingListView%24DdlCurrencyDynamic=IDR&AvailabilitySearchInputBookingListView%24ButtonSubmit=Find+Flights&ControlGroupBookingListView%24BookingListBookingListView%24Search=ForAgent&ControlGroupBookingListView%24BookingListBookingListView%24DropDownListTypeOfSearch=0&ControlGroupBookingListView%24BookingListBookingListView%24TextBoxKeyword='
+
+curl 'https://book.citilink.co.id/ScheduleSelect.aspx' 
+-H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' 
+-H 'Accept-Encoding: gzip, deflate' -H 'Accept-Language: en-US,en;q=0.5' 
+-H 'Connection: keep-alive' 
+-H 'Cookie: PaxAdult=1; PaxChild=1; PaxInfant=1; DateDeparture=2014-11-23; DateReturn=2014-11-28; FlightType=RoundTrip; FlightRoute=BPN-SUB; __utma=205092354.1024050793.1415949226.1415949226.1415949226.1; __utmz=205092354.1415949226.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); ASP.NET_SessionId=rn1iky45ltq5vs55xdlzor45; skysales=2131943946.20480.0000' 
+-H 'Host: book.citilink.co.id' 
+-H 'Referer: https://book.citilink.co.id/ScheduleSelect.aspx' 
+-H 'User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:33.0) Gecko/20100101 Firefox/33.0' -H 'Content-Type: application/x-www-form-urlencoded' 
+--data '__EVENTTARGET=&__EVENTARGUMENT=&__VIEWSTATE=%2FwEPDwUBMGRkBsrCYiDYbQKCOcoq%2FUTudEf14vk%3D&pageToken=&AvailabilitySearchInputScheduleSelectVieworiginStation1=&AvailabilitySearchInputScheduleSelectView%24TextBoxMarketOrigin1=&AvailabilitySearchInputScheduleSelectViewdestinationStation1=
+&AvailabilitySearchInputScheduleSelectView%24TextBoxMarketDestination1=&AvailabilitySearchInputScheduleSelectVieworiginStation2=
+&AvailabilitySearchInputScheduleSelectView%24TextBoxMarketOrigin2=&AvailabilitySearchInputScheduleSelectViewdestinationStation2=
+&AvailabilitySearchInputScheduleSelectView%24TextBoxMarketDestination2=
+&AvailabilitySearchInputScheduleSelectView%24RadioButtonMarketStructure=RoundTrip
+&AvailabilitySearchInputScheduleSelectView%24DropDownListMarketDay1=21
+&AvailabilitySearchInputScheduleSelectView%24DropDownListMarketMonth1=2014-11
+&date_picker=2014-11-21&AvailabilitySearchInputScheduleSelectView%24DropDownListMarketDay2=28
+&AvailabilitySearchInputScheduleSelectView%24DropDownListMarketMonth2=2014-11
+&date_picker=2014-11-28&AvailabilitySearchInputScheduleSelectView%24DropDownListPassengerType_ADT=1
+&AvailabilitySearchInputScheduleSelectView%24DropDownListPassengerType_CHD=0
+&AvailabilitySearchInputScheduleSelectView%24DropDownListPassengerType_INFANT=0
+&AvailabilitySearchInputScheduleSelectView%24DropDownListSearchBy=columnView
+&AvailabilitySearchInputScheduleSelectView%24DdlCurrencyDynamic=IDR
+&ControlGroupScheduleSelectView%24AvailabilityInputScheduleSelectView%24HiddenFieldTabIndex1=4
+&ControlGroupScheduleSelectView%24AvailabilityInputScheduleSelectView%24market1=0%7ER%7E%7ER%7ERGFR%7E%7E1%7EX%7CQG%7E+635%7E+%7E%7EBPN%7E11%2F23%2F2014+18%3A15%7ESUB%7E11%2F23%2F2014+18%3A45%7E
+&ControlGroupScheduleSelectView%24AvailabilityInputScheduleSelectView%24HiddenFieldTabIndex2=4
+&ControlGroupScheduleSelectView%24AvailabilityInputScheduleSelectView%24market2=0%7ER%7E%7ER%7ERGFR%7E%7E1%7EX%7CQG%7E+630%7E+%7E%7ESUB%7E11%2F28%2F2014+06%3A20%7EBPN%7E11%2F28%2F2014+08%3A50%7E
+&ControlGroupScheduleSelectView%24ButtonSubmit=Continue'
+
+passenger:
+curl 'https://book.citilink.co.id/Passenger.aspx' 
+-H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' 
+-H 'Accept-Encoding: gzip, deflate' -H 'Accept-Language: en-US,en;q=0.5' 
+-H 'Connection: keep-alive' 
+-H 'Cookie: PaxAdult=1; PaxChild=1; PaxInfant=1; DateDeparture=2014-11-22; DateReturn=2014-11-28; FlightType=RoundTrip; FlightRoute=BPN-SUB; __utma=205092354.1024050793.1415949226.1415949226.1415949226.1; __utmz=205092354.1415949226.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); ASP.NET_SessionId=dahve1z1uilgds2vubjien2g; skysales=2970870282.20480.0000' -H 'Host: book.citilink.co.id' 
+-H 'Referer: https://book.citilink.co.id/Passenger.aspx' 
+-H 'User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:33.0) Gecko/20100101 Firefox/33.0' -H 'Content-Type: application/x-www-form-urlencoded' 
+--data '__EVENTTARGET=&__EVENTARGUMENT=&
+__VIEWSTATE=%2FwEPDwUBMGQYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgIFR0NPTlRST0xHUk9VUFBBU1NFTkdFUiRQYXNzZW5nZXJJbnB1dFZpZXdQYXNzZW5nZXJWaWV3JENoZWNrQm94SW5zdXJhbmNlBUFDT05UUk9MR1JPVVBQQVNTRU5HRVIkUGFzc2VuZ2VySW5wdXRWaWV3UGFzc2VuZ2VyVmlldyRDaGVja0JveFBNSXZkWh6Cdtm1mad5oP%2B7VGz2nQKe
+&pageToken=
+&CONTROLGROUPPASSENGER%24ContactInputPassengerView%24DropDownListTitle=MR
+&CONTROLGROUPPASSENGER%24ContactInputPassengerView%24TextBoxFirstName=Lentera
+&CONTROLGROUPPASSENGER%24ContactInputPassengerView%24TextBoxMiddleName=PT
+&CONTROLGROUPPASSENGER%24ContactInputPassengerView%24TextBoxLastName=Informatika
+&CONTROLGROUPPASSENGER%24ContactInputPassengerView%24TextBoxAddressLine2=JL+URIP+SUMOHARJO+NO.15-C
+&CONTROLGROUPPASSENGER%24ContactInputPassengerView%24TextBoxAddressLine1=KUTISARI+INDAH+BARAT+4+%2F+1+6
+&CONTROLGROUPPASSENGER%24ContactInputPassengerView%24TextBoxAddressLine3=
+&CONTROLGROUPPASSENGER%24ContactInputPassengerView%24TextBoxCity=Surabaya
+&CONTROLGROUPPASSENGER%24ContactInputPassengerView%24DropDownListCountry=
+&CONTROLGROUPPASSENGER%24ContactInputPassengerView%24DropDownListStateProvince=
+&CONTROLGROUPPASSENGER%24ContactInputPassengerView%24TextBoxPostalCode=60222
+&CONTROLGROUPPASSENGER%24ContactInputPassengerView%24TextBoxWorkPhone=081231000037
+&CONTROLGROUPPASSENGER%24ContactInputPassengerView%24TextBoxHomePhone=085646162619
+&CONTROLGROUPPASSENGER%24ContactInputPassengerView%24TextBoxFax=03158251138
+&CONTROLGROUPPASSENGER%24ContactInputPassengerView%24TextBoxEmailAddress=intitoursby%40gmail.com
+&CONTROLGROUPPASSENGER%24PassengerInputViewPassengerView%24DropDownListTitle_0=MR
+&CONTROLGROUPPASSENGER%24PassengerInputViewPassengerView%24TextBoxFirstName_0=Raditya+Bagus
+&CONTROLGROUPPASSENGER%24PassengerInputViewPassengerView%24TextBoxLastName_0=Pratama
+&CONTROLGROUPPASSENGER%24PassengerInputViewPassengerView%24TextBoxMiddleName_0=middle
+&CONTROLGROUPPASSENGER%24PassengerInputViewPassengerView%24DropDownListNationality_0=
+&CONTROLGROUPPASSENGER%24PassengerInputViewPassengerView%24DropDownListResidentCountry_0=
+&CONTROLGROUPPASSENGER%24PassengerInputViewPassengerView%24DropDownListBirthDateDay_0=1
+&CONTROLGROUPPASSENGER%24PassengerInputViewPassengerView%24DropDownListBirthDateMonth_0=1
+&CONTROLGROUPPASSENGER%24PassengerInputViewPassengerView%24DropDownListBirthDateYear_0=1970
+&CONTROLGROUPPASSENGER%24PassengerInputViewPassengerView%24DropDownListDocumentType0_0=
+&CONTROLGROUPPASSENGER%24PassengerInputViewPassengerView%24TextBoxDocumentNumber0_0=
+&CONTROLGROUPPASSENGER%24PassengerInputViewPassengerView%24DropDownListDocumentCountry0_0=
+&CONTROLGROUPPASSENGER%24PassengerInputViewPassengerView%24DropDownListDocumentDateDay0_0=1
+&CONTROLGROUPPASSENGER%24PassengerInputViewPassengerView%24DropDownListDocumentDateMonth0_0=1
+&CONTROLGROUPPASSENGER%24PassengerInputViewPassengerView%24DropDownListDocumentDateYear0_0=2014
+&CONTROLGROUPPASSENGER%24PassengerInputViewPassengerView%24DropDownListTitle_1=MR
+&CONTROLGROUPPASSENGER%24PassengerInputViewPassengerView%24TextBoxFirstName_1=Rasya
+&CONTROLGROUPPASSENGER%24PassengerInputViewPassengerView%24TextBoxLastName_1=Atsaqof
+&CONTROLGROUPPASSENGER%24PassengerInputViewPassengerView%24TextBoxMiddleName_1=middle
+&CONTROLGROUPPASSENGER%24PassengerInputViewPassengerView%24DropDownListNationality_1=
+&CONTROLGROUPPASSENGER%24PassengerInputViewPassengerView%24DropDownListResidentCountry_1=
+&CONTROLGROUPPASSENGER%24PassengerInputViewPassengerView%24DropDownListBirthDateDay_1=21
+&CONTROLGROUPPASSENGER%24PassengerInputViewPassengerView%24DropDownListBirthDateMonth_1=4
+&CONTROLGROUPPASSENGER%24PassengerInputViewPassengerView%24DropDownListBirthDateYear_1=2011
+&CONTROLGROUPPASSENGER%24PassengerInputViewPassengerView%24DropDownListDocumentType0_1=
+&CONTROLGROUPPASSENGER%24PassengerInputViewPassengerView%24TextBoxDocumentNumber0_1=
+&CONTROLGROUPPASSENGER%24PassengerInputViewPassengerView%24DropDownListDocumentCountry0_1=
+&CONTROLGROUPPASSENGER%24PassengerInputViewPassengerView%24DropDownListDocumentDateDay0_1=1
+&CONTROLGROUPPASSENGER%24PassengerInputViewPassengerView%24DropDownListDocumentDateMonth0_1=1
+&CONTROLGROUPPASSENGER%24PassengerInputViewPassengerView%24DropDownListDocumentDateYear0_1=2014
+&CONTROLGROUPPASSENGER%24PassengerInputViewPassengerView%24DropDownListAssign_0_0=0
+&CONTROLGROUPPASSENGER%24PassengerInputViewPassengerView%24DropDownListTitle_0_0=
+&CONTROLGROUPPASSENGER%24PassengerInputViewPassengerView%24TextBoxFirstName_0_0=Aluna
+&CONTROLGROUPPASSENGER%24PassengerInputViewPassengerView%24TextBoxLastName_0_0=Aisyah
+&CONTROLGROUPPASSENGER%24PassengerInputViewPassengerView%24DropDownListGender_0_0=2
+&CONTROLGROUPPASSENGER%24PassengerInputViewPassengerView%24TextBoxMiddleName_0_0=middle
+&CONTROLGROUPPASSENGER%24PassengerInputViewPassengerView%24DropDownListNationality_0_0=
+&CONTROLGROUPPASSENGER%24PassengerInputViewPassengerView%24DropDownListResidentCountry_0_0=
+&CONTROLGROUPPASSENGER%24PassengerInputViewPassengerView%24DropDownListBirthDateDay_0_0=1
+&CONTROLGROUPPASSENGER%24PassengerInputViewPassengerView%24DropDownListBirthDateMonth_0_0=1
+&CONTROLGROUPPASSENGER%24PassengerInputViewPassengerView%24DropDownListBirthDateYear_0_0=2014
+&CONTROLGROUPPASSENGER%24PassengerInputViewPassengerView%24RadioButtonInsurance=Yes
+&CONTROLGROUPPASSENGER%24ButtonSubmit=Continue
+&CONTROLGROUPPASSENGER%24ItineraryDistributionInputPassengerView%24Distribution=2'
+
+assign seat:
+curl 'https://book.citilink.co.id/SeatMap.aspx' 
+-H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' 
+-H 'Accept-Encoding: gzip, deflate' -H 'Accept-Language: en-US,en;q=0.5' 
+-H 'Connection: keep-alive' 
+-H 'Cookie: PaxAdult=1; PaxChild=1; PaxInfant=1; DateDeparture=2014-11-22; DateReturn=2014-11-28; FlightType=RoundTrip; FlightRoute=BPN-SUB; __utma=205092354.1024050793.1415949226.1415949226.1415949226.1; __utmz=205092354.1415949226.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); ASP.NET_SessionId=dahve1z1uilgds2vubjien2g; skysales=2970870282.20480.0000' -H 'Host: book.citilink.co.id' -H 'Referer: https://book.citilink.co.id/SeatMap.aspx' -H 'User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:33.0) Gecko/20100101 Firefox/33.0' 
+-H 'Content-Type: application/x-www-form-urlencoded' 
+--data '__EVENTTARGET=ControlGroupUnitMapView%24UnitMapViewControl%24LinkButtonAssignUnit&__EVENTARGUMENT=&__VIEWSTATE=%2FwEPDwUBMGQYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgEFN0NvbnRyb2xHcm91cFVuaXRNYXBWaWV3JFVuaXRNYXBWaWV3Q29udHJvbCRDaGVja0JveFNlYXRC9WoNScpqWuAJVhj4Iqw3MUfIjw%3D%3D&pageToken=&ControlGroupUnitMapView%24UnitMapViewControl%24compartmentDesignatorInput=&ControlGroupUnitMapView%24UnitMapViewControl%24deckDesignatorInput=1&ControlGroupUnitMapView%24UnitMapViewControl%24tripInput=0&ControlGroupUnitMapView%24UnitMapViewControl%24passengerInput=0&ControlGroupUnitMapView%24UnitMapViewControl%24HiddenEquipmentConfiguration_0_PassengerNumber_0=&ControlGroupUnitMapView%24UnitMapViewControl%24EquipmentConfiguration_0_PassengerNumber_0=&ControlGroupUnitMapView%24UnitMapViewControl%24HiddenEquipmentConfiguration_0_PassengerNumber_1=&ControlGroupUnitMapView%24UnitMapViewControl%24EquipmentConfiguration_0_PassengerNumber_1=&ControlGroupUnitMapView%24UnitMapViewControl%24HiddenEquipmentConfiguration_1_PassengerNumber_0=&ControlGroupUnitMapView%24UnitMapViewControl%24EquipmentConfiguration_1_PassengerNumber_0=&ControlGroupUnitMapView%24UnitMapViewControl%24HiddenEquipmentConfiguration_1_PassengerNumber_1=&ControlGroupUnitMapView%24UnitMapViewControl%24EquipmentConfiguration_1_PassengerNumber_1='

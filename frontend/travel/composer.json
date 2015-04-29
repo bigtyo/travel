@@ -1,0 +1,15 @@
+{
+    "name": "vendor/travel",
+    "description": "Description of project travel.",
+    "authors": [
+        {
+            "name": "raditya",
+            "email": "your@email.here"
+        }
+    ],
+    "require": {
+        "fabpot/goutte": "dev-master",
+        "symfony/process": "dev-master",
+        "wsdl2phpgenerator/wsdl2phpgenerator": "~3.1"
+    }
+}
