@@ -896,6 +896,7 @@
         window.location = "#tbl_maskapai";
         var tglbrkt = $("#tanggalberangkat").val();
         var tglpergi = $("#tanggalkembali").val();
+        var isoneway = $("#oneway").is(":checked");
         
         if(tglbrkt == ""){
             alert("masukkan tanggal keberangkatan");
@@ -903,7 +904,7 @@
             return;
         }
         
-        if(tglpergi == ""){
+        if(tglpergi == "" && !isoneway){
             alert("masukkan tanggal kembali");
             $("#tanggalkembali").focus();
             return;
@@ -913,6 +914,10 @@
         
         var tgla = pecahtanggal($("#tanggalberangkat").val());
         var tglb = pecahtanggal($("#tanggalkembali").val());
+        
+        if(isoneway){
+            tglb = tgla;
+        }
         
         $(".loading").show();
         $("#dataticketing").show();
@@ -967,7 +972,7 @@
                 
             }
             
-            if(datalist.kembali.length > 0){
+            if(datalist.kembali.length > 0 && !isoneway){
                 filltabel("pulang",datalist.kembali);
                 var rute = $("#tujuan option:selected").val() + " <--> " +$("#dari option:selected").val() + " " + $("#tanggalkembali").val();
                 $("#tblpulang tr.route td").html(rute);
@@ -1104,13 +1109,14 @@
             html += '<tr>';
             html += '<td><input type="radio" name="peberbangan_'+tujuan+'" onclick="add'+tujuan+'(this,\''+data[i].maskapai+'\');" /></td>';
             html += '<td><img style="width : 120px; height : 60px" src="<?php echo base_url(); ?>img/airline/'+data[i].maskapai+'.jpg" /></td>';
-            html += '<td class="jam" >'+data[i].brkt + ' - '+ data[i].tiba +'</td>';
+            html += '<td class="jam" >'+data[i].brkt + ' - '+ unixtotime(data[i].tiba) +'</td>';
             html += '<td class="kodeterbang" >'+data[i].kode+'</td>';
             html += '<td >';
 //                    var listharga = berangkat[i].harga;
 //                    for(var y=0;y<listharga.length; y++){
 //                        html += '<div style="border: 1px solid; background: none repeat scroll 0% 0% rgb(163, 163, 163); text-align: center; width: 150px; float: left;"><input type="radio" name="hargacitilink" value="'+listharga[y].value+'" />'+listharga[y].text+'</div>'
 //                    }
+
             html += 'Rp. ' + parseFloat(data[i].harga).formatMoney(2,'.',',');
             html += '</td>';
             html += '<td style="display:none" class="harga" >'+data[i].harga+'</td>';
@@ -1122,6 +1128,19 @@
         //$("#tbl_maskapai tr").not(".loading").remove();
         $("#tbl_maskapai_"+tujuan).html(html);
         $("#tbl"+tujuan).show();
+    }
+    
+    function unixtotime(unixts){
+        var date = new Date(unixts*1000);
+        return formatnumber(date.getHours()) + ":" + formatnumber(date.getMinutes());
+    }
+    
+    function formatnumber(number){
+        if(number < 10){
+            return "0" + number;
+        }else{
+            return "" + number;
+        }
     }
     
     function completion(){
