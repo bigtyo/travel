@@ -159,10 +159,12 @@
                                                              <div class="control-group">
                                                                  <label for="rute" class="control-label">Maskapai</label>
                                                                  <div class="controls">
-                                                                     <input value="airasia" type="checkbox" class="checkbox" /><span>Air Asia</span>
-                                                                     <input value="citilink" type="checkbox" class="checkbox" /><span>Citilink</span>
-                                                                     <input value="garuda" type="checkbox" class="checkbox" /><span>Garuda</span>
-                                                                     <input value="lion" type="checkbox" class="checkbox" /><span>Lion Group</span>
+                                                                     <input id="airasia-need" value="airasia" type="checkbox" class="checkbox needs" /><span>Air Asia</span>
+                                                                     <input id="citilink-need" value="citilink" type="checkbox" class="checkbox needs" /><span>Citilink</span>
+                                                                     <input id="garuda-need" value="garuda" type="checkbox" class="checkbox needs" /><span>Garuda</span>
+                                                                     <input id="sriwijaya-need" value="garuda" type="checkbox" class="checkbox needs" /><span>Sriwijaya</span>
+                                                                     <input id="lion-need" value="lion" type="checkbox" class="checkbox needs" /><span>Lion Group</span>
+                                                                     <input id="others-need" value="lion" type="checkbox" class="checkbox needs" /><span>Others</span>
                                                                  </div>
                                                              </div>
                                                          </div>
@@ -1104,24 +1106,33 @@
     function filltabel(tujuan,data){
         
         var html = "";
+        var listneed = [];
+        $(".needs").each(function(obj){
+            if($(obj).is(":checked")){
+                listneed.push($(obj).val());
+            }
+        });
         for(var i = 0;i<data.length;i++){
             //$("").send
-            html += '<tr>';
-            html += '<td><input type="radio" name="peberbangan_'+tujuan+'" onclick="add'+tujuan+'(this,\''+data[i].maskapai+'\');" /></td>';
-            html += '<td><img style="width : 120px; height : 60px" src="<?php echo base_url(); ?>img/airline/'+data[i].maskapai+'.jpg" /></td>';
-            html += '<td class="jam" >'+data[i].brkt + ' - '+ unixtotime(data[i].tiba) +'</td>';
-            html += '<td class="kodeterbang" >'+data[i].kode+'</td>';
-            html += '<td >';
-//                    var listharga = berangkat[i].harga;
-//                    for(var y=0;y<listharga.length; y++){
-//                        html += '<div style="border: 1px solid; background: none repeat scroll 0% 0% rgb(163, 163, 163); text-align: center; width: 150px; float: left;"><input type="radio" name="hargacitilink" value="'+listharga[y].value+'" />'+listharga[y].text+'</div>'
-//                    }
+            if(listneed.indexOf(data[i].maskapai) >= 0){
+                html += '<tr>';
+                html += '<td><input type="radio" name="peberbangan_'+tujuan+'" onclick="add'+tujuan+'(this,\''+data[i].maskapai+'\');" /></td>';
+                html += '<td><img style="width : 120px; height : 60px" src="<?php echo base_url(); ?>img/airline/'+data[i].maskapai+'.jpg" /></td>';
+                html += '<td class="jam" >'+data[i].brkt + ' - '+ unixtotime(data[i].tiba) +'</td>';
+                html += '<td class="kodeterbang" >'+data[i].kode+'</td>';
+                html += '<td >';
+    //                    var listharga = berangkat[i].harga;
+    //                    for(var y=0;y<listharga.length; y++){
+    //                        html += '<div style="border: 1px solid; background: none repeat scroll 0% 0% rgb(163, 163, 163); text-align: center; width: 150px; float: left;"><input type="radio" name="hargacitilink" value="'+listharga[y].value+'" />'+listharga[y].text+'</div>'
+    //                    }
 
-            html += 'Rp. ' + parseFloat(data[i].harga).formatMoney(2,'.',',');
-            html += '</td>';
-            html += '<td style="display:none" class="harga" >'+data[i].harga+'</td>';
-            //html += '<td><a href="#dataticketing" class="btn btn-purple" onclick="book(\''+data[i].maskapai+'\',\''+data[i].maskapai+'\')">Booking</a></td>';
-            html += '</tr>';
+                html += 'Rp. ' + parseFloat(data[i].harga).formatMoney(2,'.',',');
+                html += '</td>';
+                html += '<td style="display:none" class="harga" >'+data[i].harga+'</td>';
+                //html += '<td><a href="#dataticketing" class="btn btn-purple" onclick="book(\''+data[i].maskapai+'\',\''+data[i].maskapai+'\')">Booking</a></td>';
+                html += '</tr>';
+            }
+            
 
         }
         
