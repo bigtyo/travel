@@ -75,7 +75,7 @@ class user_model extends CI_Model{
     
     public function edit($data,$login){
         try {
-            $this->db->where('login',$login);
+            $this->db->where('username',$login);
             $this->db->update('user',$data);
             $result['status'] = 1;
         } catch (Exception $exc) {
