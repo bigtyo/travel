@@ -1,8 +1,8 @@
 var page = require('webpage').create();
 //set page pixel
 page.viewportSize = {
-    width: 1920,
-    height: 1080
+    "width": 1920,
+    "height": 1080
 };
  
 
@@ -18,7 +18,7 @@ var dewasa = args[6];
 var child = args[7];
 var infant = args[8];
 var searchid = args[9];
-
+console.log(args);
 
 function pecahtanggal(tanggal){
 	var temp = tanggal.split('-');
@@ -130,7 +130,7 @@ page.onLoadFinished = function(status) {
 			var datacountkembali=0;
 			$("#tbody_return tr").each(function(obj){
 				var json = {};
-				json.maskapai = $(this).attr("data-airlinesname);
+				json.maskapai = $(this).attr("data-airlinesname");
 				if(json.maskapai.toLowerCase().trim() != 'batik'){
 					console.log("test");
 					json.brkt = $(this).attr("data-depart");
