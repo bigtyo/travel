@@ -6,6 +6,7 @@ from selenium.webdriver.support.ui import Select
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import NoAlertPresentException
 import unittest, time, re, sys
+import cfg
 
 class AirasiaIssued(unittest.TestCase):
     def setUp(self):
@@ -14,14 +15,22 @@ class AirasiaIssued(unittest.TestCase):
         self.base_url = "https://booking.airasia.com/LoginAgent.aspx"
         self.verificationErrors = []
         self.accept_next_alert = True
+        
+        self.kodemaskapai = 3
+        self.login = ""
+        self.password = ""
+        
+        self.cred = cfg.getloginandpass(self.kodemaskapai)
+        self.login = self.cred[0]
+        self.password = self.cred[1]
     
     def test_airasia_issued(self):
         driver = self.driver
         driver.get(self.base_url + "/LoginAgent.aspx")
         driver.find_element_by_id("ControlGroupLoginAgentView_AgentLoginView_TextBoxUserID").clear()
-        driver.find_element_by_id("ControlGroupLoginAgentView_AgentLoginView_TextBoxUserID").send_keys("IDTINTISUB_ADMIN")
+        driver.find_element_by_id("ControlGroupLoginAgentView_AgentLoginView_TextBoxUserID").send_keys(self.login)
         driver.find_element_by_id("ControlGroupLoginAgentView_AgentLoginView_PasswordFieldPassword").clear()
-        driver.find_element_by_id("ControlGroupLoginAgentView_AgentLoginView_PasswordFieldPassword").send_keys("TRAVEL100")
+        driver.find_element_by_id("ControlGroupLoginAgentView_AgentLoginView_PasswordFieldPassword").send_keys(self.password)
         driver.find_element_by_id("ControlGroupLoginAgentView_AgentLoginView_LinkButtonLogIn").click()
         driver.find_element_by_css_selector("#MyBookings > div.AgentMenuDiv").click()
         driver.find_element_by_id("ControlGroupBookingListView_BookingListSearchInputView_RadioForAgency").click()

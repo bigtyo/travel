@@ -41,6 +41,14 @@ class GarudaBooking(unittest.TestCase):
         self.verificationErrors = []
         self.accept_next_alert = True
         
+        self.kodemaskapai = 2
+        self.login = ""
+        self.password = ""
+        
+        self.cred = cfg.getloginandpass(self.kodemaskapai)
+        self.login = self.cred[0]
+        self.password = self.cred[1]
+        
         cnx = mysql.connector.connect(**config)
         query = ("SELECT c.*,a.firstname,a.middlename,a.lastname,a.salutation,a.tanggallahir, a.jenispenumpang,a.idmaskapaipulang,a.idmaskapaipergi,a.kodeterbangpergi,a.kodeterbangpulang,a.rute,a.tanggalpergi,a.tanggalpulang,b.teleponpelanggan FROM travel.ticketing_detail a join ticketing b on a.idticketing = b.idticketing join agent c on b.idagent = c.idagent where a.idticketing = %s")
         cursor = cnx.cursor()
@@ -130,9 +138,9 @@ class GarudaBooking(unittest.TestCase):
         driver.get(self.base_url)
 
         driver.find_element_by_name("Inputs[username]").clear()
-        driver.find_element_by_name("Inputs[username]").send_keys("SA3ININ")
+        driver.find_element_by_name("Inputs[username]").send_keys(self.login)
         driver.find_element_by_name("Inputs[password]").clear()
-        driver.find_element_by_name("Inputs[password]").send_keys("58251337")
+        driver.find_element_by_name("Inputs[password]").send_keys(self.password)
         driver.find_element_by_name("Login").click()
         driver.find_element_by_link_text("Reservasi Penerbangan").click()
 

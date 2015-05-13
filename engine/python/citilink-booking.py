@@ -25,6 +25,17 @@ class CitilinkBooking(unittest.TestCase):
         self.base_url = "https://book.citilink.co.id/loginagency.aspx"
         self.verificationErrors = []
         self.accept_next_alert = True
+        
+        
+        self.kodemaskapai = 3
+        self.login = ""
+        self.password = ""
+        
+        self.cred = cfg.getloginandpass(self.kodemaskapai)
+        self.login = self.cred[0]
+        self.password = self.cred[1]
+        #print self.login
+        #print self.password
         #self.idticketing = sys.argv.pop(0)
         #self.tanggal_awal = sys.argv.pop(1)
         #self.tanggal_akhir = sys.argv.pop(2)
@@ -117,10 +128,13 @@ class CitilinkBooking(unittest.TestCase):
             #contactnumber = sys.argv[11]
         
         
+        
         cursor.close()
+        
         cnx.close()
         #print self.pattern_pergi
         #print self.pattern_pulang
+        
         self.jumlahdewasa = 0
         self.jumlahchild = 0
         self.jumlahinfant = 0
@@ -158,10 +172,10 @@ class CitilinkBooking(unittest.TestCase):
         #return
         driver.get(self.base_url)
         driver.find_element_by_id("ControlGroupLoginAgencyView_AgentLoginLoginAgencyView_TextBoxUserID").clear()
-        driver.find_element_by_id("ControlGroupLoginAgencyView_AgentLoginLoginAgencyView_TextBoxUserID").send_keys("0038000423")
+        driver.find_element_by_id("ControlGroupLoginAgencyView_AgentLoginLoginAgencyView_TextBoxUserID").send_keys(sef.login)
         
         driver.find_element_by_id("ControlGroupLoginAgencyView_AgentLoginLoginAgencyView_PasswordFieldPassword").clear()
-        driver.find_element_by_id("ControlGroupLoginAgencyView_AgentLoginLoginAgencyView_PasswordFieldPassword").send_keys("LiNeLuCNCt!1")
+        driver.find_element_by_id("ControlGroupLoginAgencyView_AgentLoginLoginAgencyView_PasswordFieldPassword").send_keys(self.password)
         
         driver.find_element_by_id("ControlGroupLoginAgencyView_AgentLoginLoginAgencyView_ButtonLogIn").click()
         

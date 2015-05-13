@@ -6,6 +6,7 @@ from selenium.webdriver.support.ui import Select
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import NoAlertPresentException
 import unittest, time, re
+import cfg
 
 class CitilinkIssued(unittest.TestCase):
     def setUp(self):
@@ -14,15 +15,19 @@ class CitilinkIssued(unittest.TestCase):
         self.base_url = "https://book.citilink.co.id/"
         self.verificationErrors = []
         self.accept_next_alert = True
+        
+        self.kodemaskapai = 3
+        self.credentials = cfg.getloginandpass(self.kodemaskapai)
+        
     
     def test_citilink_issued(self):
         driver = self.driver
         driver.get(self.base_url + "loginagency.aspx")
         driver.find_element_by_id("ControlGroupLoginAgencyView_AgentLoginLoginAgencyView_TextBoxUserID").clear()
-        driver.find_element_by_id("ControlGroupLoginAgencyView_AgentLoginLoginAgencyView_TextBoxUserID").send_keys("0038000423")
+        driver.find_element_by_id("ControlGroupLoginAgencyView_AgentLoginLoginAgencyView_TextBoxUserID").send_keys(self.credentials[0])
         
         driver.find_element_by_id("ControlGroupLoginAgencyView_AgentLoginLoginAgencyView_PasswordFieldPassword").clear()
-        driver.find_element_by_id("ControlGroupLoginAgencyView_AgentLoginLoginAgencyView_PasswordFieldPassword").send_keys("LiNeLuCNCt!1")
+        driver.find_element_by_id("ControlGroupLoginAgencyView_AgentLoginLoginAgencyView_PasswordFieldPassword").send_keys(self.credentials[1])
         
         
         driver.find_element_by_id("ControlGroupLoginAgencyView_AgentLoginLoginAgencyView_ButtonLogIn").click()
