@@ -82,7 +82,7 @@
                                                                              <select name="dari" id="dari" class='chosen-select'>
                                                                                     <option value="-1">Berangkat Dari</option>
                                                                                     <?php foreach($bandaralist as $bandara) { ?>
-                                                                                        <option value="<?php echo $bandara->iata; ?>"><?php echo $bandara->namabandara." , ".$bandara->lokasi; ?></option>
+                                                                                        <option value="<?php echo $bandara->iata; ?>"><?php echo $bandara->namabandara." , ".$bandara->lokasi." - ".$bandara->iata; ?></option>
                                                                                     <?php } ?>
                                                                             </select>
                                                                          </div>
@@ -97,7 +97,7 @@
                                                                              <select name="tujuan" id="tujuan" class='chosen-select'>
                                                                                     <option value="-1">Tujuan</option>
                                                                                     <?php foreach($bandaralist as $bandara) { ?>
-                                                                                        <option value="<?php echo $bandara->iata; ?>"><?php echo $bandara->namabandara." , ".$bandara->lokasi; ?></option>
+                                                                                        <option value="<?php echo $bandara->iata; ?>"><?php echo $bandara->namabandara." , ".$bandara->lokasi." - ".$bandara->iata; ?></option>
                                                                                     <?php } ?>
                                                                             </select>
                                                                          </div>
@@ -159,12 +159,12 @@
                                                              <div class="control-group">
                                                                  <label for="rute" class="control-label">Maskapai</label>
                                                                  <div class="controls">
-                                                                     <input id="airasia-need" value="airasia" type="checkbox" class="checkbox needs" /><span>Air Asia</span>
-                                                                     <input id="citilink-need" value="citilink" type="checkbox" class="checkbox needs" /><span>Citilink</span>
-                                                                     <input id="garuda-need" value="garuda" type="checkbox" class="checkbox needs" /><span>Garuda</span>
-                                                                     <input id="sriwijaya-need" value="garuda" type="checkbox" class="checkbox needs" /><span>Sriwijaya</span>
-                                                                     <input id="lion-need" value="lion" type="checkbox" class="checkbox needs" /><span>Lion Group</span>
-                                                                     <input id="others-need" value="lion" type="checkbox" class="checkbox needs" /><span>Others</span>
+                                                                     <input id="airasia-need" value="airasia" type="checkbox" class="checkbox needs" checked="true" /><span>Air Asia</span>
+                                                                     <input id="citilink-need" value="citilink" type="checkbox" class="checkbox needs" checked="true" /><span>Citilink</span>
+                                                                     <input id="garuda-need" value="garuda" type="checkbox" class="checkbox needs" checked="true" /><span>Garuda</span>
+                                                                     <input id="sriwijaya-need" value="sriwijaya" type="checkbox" class="checkbox needs" checked="true" /><span>Sriwijaya</span>
+                                                                     <input id="lion-need" value="lion" type="checkbox" class="checkbox needs" checked="true" /><span>Lion Group</span>
+                                                                     <input id="others-need" value="others" type="checkbox" class="checkbox needs" checked="true" /><span>Others</span>
                                                                  </div>
                                                              </div>
                                                          </div>
@@ -1108,13 +1108,13 @@
         var html = "";
         var listneed = [];
         $(".needs").each(function(obj){
-            if($(obj).is(":checked")){
-                listneed.push($(obj).val());
+            if($(this).is(":checked")){
+                listneed.push($(this).val());
             }
         });
         for(var i = 0;i<data.length;i++){
             //$("").send
-            if(listneed.indexOf(data[i].maskapai) >= 0){
+            if(listneed.indexOf(data[i].maskapai.toLowerCase()) >= 0){
                 html += '<tr>';
                 html += '<td><input type="radio" name="peberbangan_'+tujuan+'" onclick="add'+tujuan+'(this,\''+data[i].maskapai+'\');" /></td>';
                 html += '<td><img style="width : 120px; height : 60px" src="<?php echo base_url(); ?>img/airline/'+data[i].maskapai+'.jpg" /></td>';

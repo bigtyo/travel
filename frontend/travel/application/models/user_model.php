@@ -32,6 +32,18 @@ class user_model extends CI_Model{
         return $data;
     }
     
+    public function isOwnerUser($username,$ischeckmasteruser = false){
+        $query = $this->db->query("SELECT * FROM travel.user a join agent b on a.agent = b.idagent where ISNULL(b.parent) and a.username = b.username and a.username like '".$username."'");
+        if($ischeckmasteruser){
+            $query = $query = $this->db->query("SELECT * FROM travel.user a join agent b on a.agent = b.idagent JOIN agent_masteruser c ON c.username = a.username where ISNULL(b.parent) and a.username = b.username and a.username like '".$username."'");
+        }
+        return $query->num_rows() > 0;
+        
+        
+    }
+    
+    
+    
     public function getUserDetail($userid){
         $this->db->from('user');
         $this->db->where(array('username' => $userid));

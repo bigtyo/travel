@@ -50,6 +50,9 @@ class RS_Controller extends CI_Controller {
                             $dataheader['telepon'] = $CI->session->userdata('telepon');
                             $dataheader['ismaster'] = $CI->session->userdata('ismaster');
                             
+                            $dataheader['ismasteruser'] = $CI->session->userdata('ismasteruser');
+                            $dataheader['isowneruser'] = $CI->session->userdata('isowneruser');
+                            
                             $this->load->view('templates/header',$dataheader);
                         }
                         

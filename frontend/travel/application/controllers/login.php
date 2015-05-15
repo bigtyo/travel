@@ -45,7 +45,9 @@ class login extends CI_Controller{
                    "telepon" => $user->telepon,
                    "agentid" => $user->idagent,
                    "roleid" => $user->idrole,
-                   "ismaster" => $this->agent_model->ismasteragent($user->idagent)
+                   "ismaster" => $this->agent_model->ismasteragent($user->idagent),
+                   "ismasteruser" => $this->user_model->isOwnerUser($user->username,true),
+                   "isowneruser" => $this->user_model->isOwnerUser($user->username)
                 );
                 $this->session->set_userdata($userdata);
                 //$this->load->library('user_agent');

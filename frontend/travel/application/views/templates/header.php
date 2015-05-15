@@ -180,7 +180,7 @@
     </script>
 	<div id="navigation">
 		<div class="container-fluid">
-			<a href="#" id="brand">Inti Raya Agent Back Office</a>
+			<a href="#" id="brand">Inti Lintas Raya Agent Back Office</a>
 			<a href="#" class="toggle-nav" rel="tooltip" data-placement="bottom" title="Toggle navigation"><i class="icon-reorder"></i></a>
 			<ul class='main-nav'>
 				<li class='active'>
@@ -210,15 +210,19 @@
                                                 <li class="dropdown-submenu"   >
 							<a href="<?php echo base_url();?>#" class='dropdown-toggle' data-toggle='dropdown'>Master Data</a>
                                                         <ul class="dropdown-menu">
+                                                            <?php if($ismasteruser) { ?>
                                                             <li>
                                                                     <a href="<?php echo base_url();?>index.php/master-data/airline">Master Penerbangan</a>
                                                             </li>
+                                                            <?php } ?>
                                                             <li>
                                                                     <a href="<?php echo base_url();?>index.php/master-data/akun">Master Akun</a>
                                                             </li>
+                                                            <?php if($ismasteruser) { ?>
                                                             <li>
                                                                     <a href="<?php echo base_url();?>index.php/maskapai/listlogin">List Login maskapai</a>
                                                             </li>
+                                                            <?php } ?>
                                                             <li>
                                                                     <a href="<?php echo base_url();?>index.php/master-data/payment">Master cara bayar</a>
                                                             </li>
@@ -265,9 +269,9 @@
                                                             </li>
                                                         </ul>
 						</li>
-                                                <li>
+<!--                                                <li>
 							<a href="<?php echo base_url();?>index.php/agent/role-access">Role dan Hak Akses</a>
-						</li>
+						</li>-->
                                                 
 						<li>
 							<a href="<?php echo base_url();?>index.php/user/userlist">Manajemen user</a>

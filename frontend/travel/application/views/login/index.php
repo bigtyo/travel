@@ -10,7 +10,7 @@
 	<!-- Apple devices fullscreen -->
 	<meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 	
-	<title>Inti Raya Travel Agent Login</title>
+	<title>Inti Lintas Raya Travel Agent Login</title>
 
 	<!-- Bootstrap -->
 	<link rel="stylesheet" href="<?php echo base_url();?>css/bootstrap.min.css">
