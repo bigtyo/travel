@@ -52,7 +52,13 @@ class RS_Controller extends CI_Controller {
                             
                             $dataheader['ismasteruser'] = $CI->session->userdata('ismasteruser');
                             $dataheader['isowneruser'] = $CI->session->userdata('isowneruser');
-                            
+                            $dataheader['isbook'] = $CI->session->userdata('isbook');
+                            $dataheader['isissued'] = $CI->session->userdata('isissued');
+                            $dataheader['isfinance'] = $CI->session->userdata('isfinance');
+                            $dataheader['isdeposit'] = $CI->session->userdata('isdeposit');
+                            $dataheader['isprice'] = $CI->session->userdata('isprice');
+                            $dataheader['ismanageuser'] = $CI->session->userdata('ismanageuser');
+                            $dataheader['ismasterdata'] = $CI->session->userdata('ismasterdata');
                             $this->load->view('templates/header',$dataheader);
                         }
                         

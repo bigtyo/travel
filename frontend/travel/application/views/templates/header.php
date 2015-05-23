@@ -206,7 +206,7 @@
                                                             </li>
                                                         </ul>
 						</li>
-                                               
+                                               <?php if($ismasterdata){ ?>
                                                 <li class="dropdown-submenu"   >
 							<a href="<?php echo base_url();?>#" class='dropdown-toggle' data-toggle='dropdown'>Master Data</a>
                                                         <ul class="dropdown-menu">
@@ -228,7 +228,8 @@
                                                             </li>
                                                         </ul>
 						</li>
-                                                
+                                               <?php } ?>
+                                                <?php if($isfinance){ ?>
                                                 <li class="dropdown-submenu">
                                                     <a href="#" data-toggle="dropdown" class='dropdown-toggle'>Finance</a>
                                                     <ul class="dropdown-menu">
@@ -251,16 +252,18 @@
                                                             </li>
                                                     </ul>
                                                 </li>
-						
+						<?php } ?>
 					</ul>
 				</li>
 				<?php } ?>
+                                 <?php if($isprice || $ismanageuser){ ?>
                                 <li>
 					<a href="#" data-toggle="dropdown" class='dropdown-toggle'>
 						<span>Master Data Sub Agent</span>
 						<span class="caret"></span>
 					</a>
 					<ul class="dropdown-menu">
+                                            <?php if($isprice){ ?>
 						<li class="dropdown-submenu">
 							<a href="<?php echo base_url();?>index.php/profile-agent" data-toggle="dropdown" class='dropdown-toggle'>Profil Agent</a>
                                                         <ul class="dropdown-menu">
@@ -269,16 +272,20 @@
                                                             </li>
                                                         </ul>
 						</li>
+                                             <?php } ?>
 <!--                                                <li>
 							<a href="<?php echo base_url();?>index.php/agent/role-access">Role dan Hak Akses</a>
 						</li>-->
-                                                
+                                                <?php if($ismanageuser){ ?>
 						<li>
 							<a href="<?php echo base_url();?>index.php/user/userlist">Manajemen user</a>
 						</li>
+                                                <?php } ?>
 
 					</ul>
 				</li>
+                                <?php } ?>
+                                <?php if($isfinance){ ?>
 				<li>
 					<a href="#" data-toggle="dropdown" class='dropdown-toggle'>
 						<span>Finance</span>
@@ -294,6 +301,7 @@
 						
 					</ul>
 				</li>
+                                <?php } ?>
 				<li>
 					<a href="#" data-toggle="dropdown" class='dropdown-toggle'>
 						<span>Ticketing</span>
@@ -304,9 +312,12 @@
 						<li class="dropdown-submenu">
                                                     <a href="<?php echo base_url();?>index.php/ticket/booking" data-toggle="dropdown" class="dropdown-toggle">Reservasi Ticket</a>
                                                     <ul class="dropdown-menu">
+                                                        <?php if($isbook){ ?>
                                                         <li><a href="<?php echo base_url();?>index.php/search">Pencarian dan booking</a></li>
-                                                        
+                                                        <?php } ?>
+                                                        <?php if($isissued){ ?>
                                                         <li><a href="<?php echo base_url();?>index.php/ticket/cancel?search=1">Issue Ticket by Booking</a></li>
+                                                        <?php } ?>
                                                         <li><a href="<?php echo base_url();?>index.php/ticket/bookings">My Tickets</a></li>
                                                     </ul>
 							

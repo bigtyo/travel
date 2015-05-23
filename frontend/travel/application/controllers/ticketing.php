@@ -46,7 +46,13 @@ class ticketing extends RS_Controller{
             $data_details = array();
             if(count($details) > 0){
                 $maskapaipergi = $this->getidmaskapaibyname($datapergi['kodemaskapai']);
+                //try {
                 $maskapaipulang = $this->getidmaskapaibyname($datapulang['kodemaskapai']);
+                //} catch (Exception $exc) {
+                    //echo $exc->getTraceAsString();
+                //}
+
+                
             }
             foreach($details as $detail){
                 $detail['createdby'] = $this->session->userdata('username');

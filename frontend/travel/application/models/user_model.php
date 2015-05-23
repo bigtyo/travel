@@ -7,9 +7,13 @@ class user_model extends CI_Model{
     }
     
     public function getUserlist($agentid){
+        
+        
         $this->db->from("user");
         $this->db->where('agent = '.$agentid);
-        return $this->db->get()->result();
+        $result = $this->db->get()->result();
+        
+        return $result;
     }
     
     public function getUser($username)
@@ -79,10 +83,17 @@ class user_model extends CI_Model{
     }
     
     public function getAllNoAgentUsers(){
+        
+        
+        
         $this->db->from('user');
         $this->db->where("isnull(agent) = true");
         return $this->db->get()->result();
+        
+        
     }
+    
+    
     
     
     public function edit($data,$login){

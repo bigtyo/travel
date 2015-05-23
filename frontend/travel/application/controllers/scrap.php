@@ -206,7 +206,7 @@ class scrap extends CI_Controller{
         $idticketing = $this->input->post('idticketing');
         $mode = $this->input->post('mode');
         
-        exec("xvfb-run python ".PYTHON_PATH."airasia-booking.py ".$idticketing. " ".$mode);
+        exec("python.exe ".PYTHON_PATH."airasia-booking.py ".$idticketing. " ".$mode);
         $path =  RES_PATH."airasia_".$idticketing;
         
         //$file = file($path);
@@ -317,13 +317,19 @@ class scrap extends CI_Controller{
         
         $idticketing = $this->input->post('idticketing');
         
-        $this->ticketing_model->deletecaptcha($idticketing);
-        unlink(RES_PATH_PHYS.$idticketing.".jpg");
-        unlink(RES_PATH_PHYS."sc_".$idticketing.".png");
+        try {
+            $this->ticketing_model->deletecaptcha($idticketing);
+            unlink(RES_PATH_PHYS.$idticketing.".jpg");
+            unlink(RES_PATH_PHYS."sc_".$idticketing.".png");
+        } catch (Exception $exc) {
+            //echo $exc->getTraceAsString();
+        }
+
+        
         
         $mode = $this->input->post('mode');
         
-        exec("xvfb-run python ".PYTHON_PATH."lionair_booking.py ".$idticketing. " ".$mode);
+        exec("python.exe ".PYTHON_PATH."lionair_booking.py ".$idticketing. " ".$mode);
         $path =  RES_PATH."lionair_".$idticketing;
         $html = file_get_html($path);
         
@@ -351,7 +357,7 @@ class scrap extends CI_Controller{
         
         $idticketing = $this->input->post('idticketing');
         $mode = $this->input->post('mode');
-        $output = exec("xvfb-run python ".PYTHON_PATH."citilink-booking.py ".$idticketing. " ".$mode);
+        exec("python.exe ".PYTHON_PATH."citilink-booking.py ".$idticketing. " ".$mode);
         $path =  RES_PATH."citilink_".$idticketing;
         //"C:\\pythonproject\\citilink-booking.py 44 1";
         //$file = file($path);
@@ -553,7 +559,7 @@ class scrap extends CI_Controller{
         $idticketing = $this->input->post('idticketing');
         $mode = $this->input->post('mode');
         
-        exec("xvfb-run python ".PYTHON_PATH."garuda-booking.py ".$idticketing. " ".$mode);
+        exec("python.exe ".PYTHON_PATH."garuda-booking.py ".$idticketing. " ".$mode);
         $path =  RES_PATH."garuda_".$idticketing;
         
         //$file = file($path);
@@ -613,7 +619,7 @@ class scrap extends CI_Controller{
         
         $kodebooking = $this->input->post('kodebooking');
         
-        $output = exec("xvfb-run python ".PYTHON_PATH."citilink_issued.py ".$kodebooking);
+        $output = exec("python.exe ".PYTHON_PATH."citilink_issued.py ".$kodebooking);
         
         $res =(int) trim($output);
         
@@ -635,7 +641,7 @@ class scrap extends CI_Controller{
         
         $kodebooking = $this->input->post('kodebooking');
         
-        $output = exec("xvfb-run python ".PYTHON_PATH."airasia_issued.py ".$kodebooking);
+        $output = exec("python.exe ".PYTHON_PATH."airasia_issued.py ".$kodebooking);
         
         $res =(int) trim($output);
         
